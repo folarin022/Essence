@@ -1,5 +1,84 @@
 [
   {
+    "ContainingType": "EssenceShop.Controllers.ClientsController",
+    "Method": "RegisterClients",
+    "RelativePath": "api/Clients",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "EssenceShop.Dto.ClientsModel.CreateClientDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EssenceShop.Controllers.ClientsController",
+    "Method": "GetAllClients",
+    "RelativePath": "api/Clients/clients",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EssenceShop.Controllers.ClientsController",
+    "Method": "DeleteClients",
+    "RelativePath": "api/Clients/delete{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EssenceShop.Controllers.ClientsController",
+    "Method": "GetClientsById",
+    "RelativePath": "api/Clients/get-by-id{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EssenceShop.Controllers.ClientsController",
+    "Method": "UpdateClients",
+    "RelativePath": "api/Clients/update{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "EssenceShop.Dto.ClientsModel.UpdateClientsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EssenceShop.Controllers.ClothesController",
     "Method": "AddClothe",
     "RelativePath": "api/Clothes",
@@ -10,6 +89,22 @@
       {
         "Name": "request",
         "Type": "EssenceShop.Dto.ClothesModel.CreateClothesDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EssenceShop.Controllers.ClothesController",
+    "Method": "DeleteClothe",
+    "RelativePath": "api/Clothes/delete{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],

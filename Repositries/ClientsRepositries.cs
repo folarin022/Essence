@@ -13,9 +13,9 @@ namespace EssenceShop.Repositries
             throw new NotImplementedException();
         }
 
-        public async Task<bool> AddClient(CreateClientDto request, CancellationToken cancellationToken)
+        public async Task<bool> AddClient(Clients clients, CancellationToken cancellationToken)
         {
-            await dbContext.AddAsync(request, cancellationToken);
+            await dbContext.AddAsync(clients, cancellationToken);
             return await dbContext.SaveChangesAsync(cancellationToken) > 0;
         }
 

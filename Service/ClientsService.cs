@@ -14,35 +14,33 @@ namespace EssenceShop.Service
         private readonly ILogger<ClientsService> logger = logger;
         private readonly EssenceDbContext dbContext = dbContext;
 
-        public async Task<BaseResponse<bool>> AddClients(CreateClientDto request, CancellationToken cancellationToken)
+        public async Task<BaseResponse<Clients>> AddClients(CreateClientDto request, CancellationToken cancellationToken)
         {
-            var response = new BaseResponse<bool>();
+            var response = new BaseResponse<Clients>();
 
             try
             {
-                var clients = new Data.Clients
+                var clients = new Clients
                 {
                     ClientId = Guid.NewGuid(),
                     FirstName = request.FirstName,
                     OtherName = request.OtherName,
-                    Quantity = request.Quantity,
-                    AmountPaid = request.AmountPaid
-
+                    Email = request.Email,
+                    Address = request.Address
 
                 };
 
-                await clientsRepositries.AddClient(request, cancellationToken);
-                await clientsRepositries.AddAsync(request);
-                await clientsRepositries.SaveChangesAsync();
+                var saved = await clientsRepositries.AddClient(clients, cancellationToken);
+
 
                 response.IsSuccess = true;
-                response.Data = true;
+                response.Data = clients;
                 response.Message = "Clients created successfully";
             }
             catch (Exception ex)
             {
                 response.IsSuccess = false;
-                response.Data = false;
+                response.Data = null;
                 response.Message = $"Error creating clients: {ex.Message}";
             }
 
@@ -145,19 +143,20 @@ namespace EssenceShop.Service
 
             try
             {
-                var clothe = await clientsRepositries.GetClientsById(Id, cancellationToken);
-                if (clothe == null)
+                var clients = await clientsRepositries.GetClientsById(Id, cancellationToken);
+                if (clients == null)
                 {
                     response.IsSuccess = false;
                     response.Message = " Clothes not found";
                     return response;
                 }
 
-                clothe.ClientId = Guid.NewGuid();
-                clothe.FirstName = request.FirstName;
-                clothe.OtherName = request.OtherName;
-                clothe.Quantity = request.Quantity;
-                clothe.AmountPaid = request.AmountPaid;
+                clients.ClientId = Guid.NewGuid();
+                clients.FirstName = request.FirstName;
+                clients.OtherName = request.OtherName;
+                clients.Address = request.Address;
+                clients.Email = request.Email;
+
 
 
 

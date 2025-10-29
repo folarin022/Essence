@@ -35,7 +35,7 @@ namespace EssenceShop.Controllers
             {
                 return NotFound(new
                 {
-                    message = $"Product with ID {id} was not found."
+                    message = $"Clothes with ID {id} was not found."
                 });
             }
             else
@@ -57,6 +57,13 @@ namespace EssenceShop.Controllers
         {
             var response = await _clothesService.GetAllClothes(cancellationToken);
             return Ok(response);
+        }
+
+        [HttpDelete("delete{id:guid}")]
+        public async Task<IActionResult> DeleteClothe(Guid id, CancellationToken cancellationToken )
+        {
+            await _clothesService.DeleteClothe(id, cancellationToken);
+            return Ok("Clothes deleted successfully.");
         }
     }
 }
