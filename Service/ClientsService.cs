@@ -1,0 +1,178 @@
+﻿using EssenceShop.Context;
+using EssenceShop.Data;
+using EssenceShop.Dto;
+using EssenceShop.Dto.ClientsModel;
+using EssenceShop.Dto.ClothesModel;
+using EssenceShop.Repositries.Interface;
+using EssenceShop.Service.Interface;
+
+namespace EssenceShop.Service
+{
+    public class ClientsService(IClientsRepositries clientsRepositries, ILogger<ClientsService> logger, EssenceDbContext dbContext) : IClientsService
+    {
+        private readonly IClientsRepositries clientsRepositries = clientsRepositries;
+        private readonly ILogger<ClientsService> logger = logger;
+        private readonly EssenceDbContext dbContext = dbContext;
+
+        public async Task<BaseResponse<bool>> AddClients(CreateClientDto request, CancellationToken cancellationToken)
+        {
+            var response = new BaseResponse<bool>();
+
+            try
+            {
+                var clients = new Data.Clients
+                {
+                    ClientId = Guid.NewGuid(),
+                    FirstName = request.FirstName,
+                    OtherName = request.OtherName,
+                    Quantity = request.Quantity,
+                    AmountPaid = request.AmountPaid
+
+
+                };
+
+                await clientsRepositries.AddClient(request, cancellationToken);
+                await clientsRepositries.AddAsync(request);
+                await clientsRepositries.SaveChangesAsync();
+
+                response.IsSuccess = true;
+                response.Data = true;
+                response.Message = "Clients created successfully";
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Data = false;
+                response.Message = $"Error creating clients: {ex.Message}";
+            }
+
+            return response;
+        }
+
+        public async Task<BaseResponse<bool>> DeleteClients(Guid Id, CancellationToken cancellationToken)
+        {
+            try
+            {
+                var isDeleted = await clientsRepositries.DeleteClients(Id, cancellationToken);
+                if (!isDeleted)
+                {
+                    return new BaseResponse<bool>
+                    {
+                        IsSuccess = false,
+                        Message = "Failed to delete clients",
+                        Data = false
+                    };
+                }
+
+
+
+                return new BaseResponse<bool>
+                {
+                    IsSuccess = true,
+                    Message = "Clients deleted successfully",
+                    Data = true
+                };
+
+
+            }
+
+            catch (Exception ex)
+            {
+                logger.LogError(ex, "Error occurred while deleting usclientser");
+                return new BaseResponse<bool>
+                {
+                    IsSuccess = false,
+                    Message = "An error occurred while deleting the clients",
+                    Data = false
+                };
+            }
+        }
+
+        public async Task<BaseResponse<List<Data.Clients>>> GetAllClients(CancellationToken cancellationToken)
+        {
+            var response = new BaseResponse<List<Data.Clients>>();
+
+            try
+            {
+                var clothes = await clientsRepositries.GetAllClients(cancellationToken);
+
+
+                response.IsSuccess = true;
+                response.Data = clothes;
+                response.Message = "Clients retrieved successfully";
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Data = null;
+                response.Message = $"Error retrieving Clothe: {ex.Message}";
+            }
+
+            return response;
+        }
+
+
+        public async Task<BaseResponse<Clients>> GetClientsById(Guid id, CancellationToken cancellationToken)
+        {
+            var response = new BaseResponse<Data.Clients>();
+
+            try
+            {
+                var clients = await clientsRepositries.GetClientsById(id, cancellationToken);
+                if (clients == null)
+                {
+                    response.IsSuccess = false;
+                    response.Message = "User not found";
+                    return response;
+                }
+
+                response.IsSuccess = true;
+                response.Data = clients;
+                response.Message = "User retrieved successfully";
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = $"Error retrieving user: {ex.Message}";
+            }
+
+            return response;
+        }
+
+        public async Task<BaseResponse<bool>> UpdateClients(Guid Id, UpdateClientsDto request, CancellationToken cancellationToken)
+        {
+            var response = new BaseResponse<bool>();
+
+            try
+            {
+                var clothe = await clientsRepositries.GetClientsById(Id, cancellationToken);
+                if (clothe == null)
+                {
+                    response.IsSuccess = false;
+                    response.Message = " Clothes not found";
+                    return response;
+                }
+
+                clothe.ClientId = Guid.NewGuid();
+                clothe.FirstName = request.FirstName;
+                clothe.OtherName = request.OtherName;
+                clothe.Quantity = request.Quantity;
+                clothe.AmountPaid = request.AmountPaid;
+
+
+
+                response.IsSuccess = true;
+                response.Data = true;
+                response.Message = "Clients updated successfully";
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Data = false;
+                response.Message = $"Error updating Clients: {ex.Message}";
+            }
+
+            return response;
+        }
+    }
+}
