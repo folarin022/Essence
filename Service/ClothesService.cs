@@ -1,4 +1,5 @@
-﻿using EssenceShop.Context;
+﻿using Azure;
+using EssenceShop.Context;
 using EssenceShop.Data;
 using EssenceShop.Dto;
 using EssenceShop.Dto.ClothesModel;
@@ -30,6 +31,8 @@ namespace EssenceShop.Service
 
                 var clothesAmount = new ClothesAmount { PricePerCloth = 400m };
                 var total = request.Quantity * clothesAmount.PricePerCloth;
+
+
 
 
 
@@ -153,7 +156,7 @@ namespace EssenceShop.Service
         }
 
 
-    public async Task<BaseResponse<bool>> DeleteClothe(Guid id, CancellationToken cancellationToken)
+        public async Task<BaseResponse<bool>> DeleteClothe(Guid id, CancellationToken cancellationToken)
         {
             var response = new BaseResponse<bool>();
 
@@ -186,5 +189,43 @@ namespace EssenceShop.Service
             return response;
         }
 
+        public async Task<BaseResponse<bool>> CollectClothe(Guid id, CancellationToken cancellationToken)
+        {
+            var response = new BaseResponse<bool>();
+
+            try
+            {
+                var isMarked = await _clothesRepository.CollectClothe(id, cancellationToken);
+
+                if (!isMarked)
+                {
+                    response.IsSuccess = false;
+                    response.Message = "Clothe not found or failed to mark as collected.";
+                    response.Data = false;
+                    return response;
+                }
+
+                response.IsSuccess = true;
+                response.Message = "Clothe marked as collected successfully.";
+                response.Data = true;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error marking clothe as collected");
+                response.IsSuccess = false;
+                response.Message = $"Error marking as collected: {ex.Message}";
+            }
+
+            return response;
+        }
+
     }
 }
+    
+            
+            
+              
+            
+
+
+           

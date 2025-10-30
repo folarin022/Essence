@@ -10,6 +10,7 @@
         public int Quantity { get; set; }
         public decimal Balance { get; set; }
         public decimal AmountPaid { get; set; }
+        public string Available { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; }
     }
 }

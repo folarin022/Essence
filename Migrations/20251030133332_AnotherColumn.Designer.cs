@@ -4,6 +4,7 @@ using EssenceShop.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EssenceShop.Migrations
 {
     [DbContext(typeof(EssenceDbContext))]
-    partial class EssenceDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251030133332_AnotherColumn")]
+    partial class AnotherColumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -61,6 +64,10 @@ namespace EssenceShop.Migrations
                     b.Property<decimal>("AmountPaid")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<string>("Available")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<decimal>("Balance")
                         .HasColumnType("decimal(18,2)");
 
@@ -78,12 +85,6 @@ namespace EssenceShop.Migrations
 
                     b.Property<Guid>("ClothesId")
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("CollectedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsCollected")
-                        .HasColumnType("bit");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");

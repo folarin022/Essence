@@ -12,7 +12,8 @@
         public decimal AmountPaid { get; set; }
         public decimal totalPrice { get; set; }
         public decimal Balance { get;set; }
+        public bool IsCollected { get; set; } = false;
+        public DateTime? CollectedDate { get; set; }
 
-        
     }
 }

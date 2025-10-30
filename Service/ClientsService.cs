@@ -19,6 +19,7 @@ namespace EssenceShop.Service
 
             try
             {
+                logger.LogInformation("Registering client {Client}", request);
                 var clients = new Clients
                 {
                     ClientId = Guid.NewGuid(),

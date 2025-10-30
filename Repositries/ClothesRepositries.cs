@@ -55,5 +55,19 @@ namespace EssenceShop.Repositries
         {
             throw new NotImplementedException();
         }
+
+        public async Task<bool> CollectClothe(Guid id, CancellationToken cancellationToken)
+        {
+            var clothe = await _dbContext.Clothes.FirstOrDefaultAsync(c => c.Id == id, cancellationToken);
+            if (clothe == null)
+                return false;
+
+            clothe.IsCollected = true;
+            clothe.CollectedDate = DateTime.UtcNow;
+
+            _dbContext.Clothes.Update(clothe);
+            return await _dbContext.SaveChangesAsync(cancellationToken) > 0;
+        }
+
     }
 }

@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "EssenceShop.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "EssenceShop.Controllers.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EssenceShop.Controllers.ClientsController",
     "Method": "RegisterClients",
     "RelativePath": "api/Clients",
@@ -96,6 +112,22 @@
   },
   {
     "ContainingType": "EssenceShop.Controllers.ClothesController",
+    "Method": "CollectClothe",
+    "RelativePath": "api/Clothes/collect/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EssenceShop.Controllers.ClothesController",
     "Method": "DeleteClothe",
     "RelativePath": "api/Clothes/delete{id}",
     "HttpMethod": "DELETE",
@@ -156,26 +188,5 @@
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "EssenceShop.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[EssenceShop.WeatherForecast, EssenceShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
   }
 ]

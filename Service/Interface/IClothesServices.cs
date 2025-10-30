@@ -10,6 +10,7 @@ namespace EssenceShop.Service.Interface
         Task<BaseResponse<Clothes>> AddClothes(CreateClothesDto request, CancellationToken cancellationToken);
         Task<BaseResponse<List<Data.Clothes>>> GetAllClothes(CancellationToken cancellationToken);
         Task<BaseResponse<Clothes>> GetClothesById(Guid id, CancellationToken cancellationToken);
+        Task<BaseResponse<bool>> CollectClothe(Guid id, CancellationToken cancellationToken);
         Task<BaseResponse<bool>> DeleteClothe(Guid Id , CancellationToken cancellationToken);
         Task<BaseResponse<bool>> UpdateClothes(Guid Id,UpdateClothesDto request, CancellationToken cancellationToken);
 

@@ -1,10 +1,11 @@
 ﻿using EssenceShop.Dto.ClientsModel;
 using EssenceShop.Service.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EssenceShop.Controllers
 {
-     
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
 
@@ -48,7 +49,7 @@ namespace EssenceShop.Controllers
                 return Ok(response);
             }
         }
-
+        [Authorize]
         [HttpPut("update{id:guid}")]
         public async Task<IActionResult> UpdateClients(Guid Id,UpdateClientsDto request, CancellationToken cancellationToken)
 

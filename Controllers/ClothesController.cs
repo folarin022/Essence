@@ -1,11 +1,13 @@
 ﻿using EssenceShop.Data;
 using EssenceShop.Dto.ClothesModel;
 using EssenceShop.Service.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading;
 
 namespace EssenceShop.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ClothesController : ControllerBase
@@ -18,7 +20,7 @@ namespace EssenceShop.Controllers
             _clothesService = clothesService;
         }
 
-
+       
         [HttpPost]
         public async Task<IActionResult> AddClothe(CreateClothesDto request,CancellationToken cancellationToken)
         {
@@ -43,6 +45,17 @@ namespace EssenceShop.Controllers
                 return Ok(response);
             }
         }
+
+        [HttpPut("collect/{id:guid}")]
+        public async Task<IActionResult> CollectClothe(Guid id, CancellationToken cancellationToken)
+        {
+            var response = await _clothesService.CollectClothe(id, cancellationToken);
+            if (!response.IsSuccess)
+                return BadRequest(response);
+
+            return Ok(response);
+        }
+
 
         [HttpPut("update{id:guid}")]
         public async Task<IActionResult> UpdateClothe(Guid Id,UpdateClothesDto request,CancellationToken cancellationToken)
