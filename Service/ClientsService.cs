@@ -2,7 +2,6 @@
 using EssenceShop.Data;
 using EssenceShop.Dto;
 using EssenceShop.Dto.ClientsModel;
-using EssenceShop.Dto.ClothesModel;
 using EssenceShop.Repositries.Interface;
 using EssenceShop.Service.Interface;
 
