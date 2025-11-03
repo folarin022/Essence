@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace EssenceShop.Controllers
 {
-    [Authorize]
+    
     [Route("api/[controller]")]
     [ApiController]
     public class ClothesController : ControllerBase
@@ -20,18 +20,18 @@ namespace EssenceShop.Controllers
             _clothesService = clothesService;
         }
 
-       
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> AddClothe(CreateClothesDto request,CancellationToken cancellationToken)
         {
             await _clothesService.AddClothes(request, cancellationToken);
             return Ok("Clothes added successfully.");
         }
-
+        [Authorize]
         [HttpGet("Id:{id:guid}")]
         public async Task<IActionResult> GetClotheByID(Guid id, CancellationToken cancellationToken)
         {
-            var response = await _clothesService.GetClothesById(id, cancellationToken);
+            var response = await _clothesService.GetClothesById(id, cancellationToken); 
 
             if (response == null)
             {
@@ -45,18 +45,18 @@ namespace EssenceShop.Controllers
                 return Ok(response);
             }
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpPut("collect/{id:guid}")]
         public async Task<IActionResult> CollectClothe(Guid id, CancellationToken cancellationToken)
         {
             var response = await _clothesService.CollectClothe(id, cancellationToken);
-            if (!response.IsSuccess)
+            if (!response.IsSuccess) 
                 return BadRequest(response);
 
             return Ok(response);
         }
 
-
+        [Authorize(Roles = "Admin")]
         [HttpPut("update{id:guid}")]
         public async Task<IActionResult> UpdateClothe(Guid Id,UpdateClothesDto request,CancellationToken cancellationToken)
         {
@@ -64,7 +64,7 @@ namespace EssenceShop.Controllers
             return Ok(result);
         }
 
-
+        [Authorize]
         [HttpGet("get-all")]
         public async Task<IActionResult> GetAllClothes (CancellationToken cancellationToken)
         {
@@ -72,6 +72,8 @@ namespace EssenceShop.Controllers
             return Ok(response);
         }
 
+
+        [Authorize(Roles = "Admin")]
         [HttpDelete("delete{id:guid}")]
         public async Task<IActionResult> DeleteClothe(Guid id, CancellationToken cancellationToken )
         {

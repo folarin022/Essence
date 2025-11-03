@@ -17,14 +17,14 @@ namespace EssenceShop.Controllers
         {
             _clientsService = clientsService;
         }
-
+        [Authorize (Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> RegisterClients(CreateClientDto input, CancellationToken cancellationToken)
         {
             await _clientsService.AddClients(input, cancellationToken);
             return Ok("clients registered successfully.");
         }
-
+        [Authorize]
         [HttpGet("clients")]
         public async Task<IActionResult> GetAllClients(CancellationToken cancellationToken)
         {
@@ -32,6 +32,7 @@ namespace EssenceShop.Controllers
             return Ok(response);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet("get-by-id{id:guid}")]
         public async Task<IActionResult> GetClientsById(Guid Id, CancellationToken cancellationToken )
         {
@@ -49,7 +50,7 @@ namespace EssenceShop.Controllers
                 return Ok(response);
             }
         }
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpPut("update{id:guid}")]
         public async Task<IActionResult> UpdateClients(Guid Id,UpdateClientsDto request, CancellationToken cancellationToken)
 
@@ -57,7 +58,7 @@ namespace EssenceShop.Controllers
             var result = await _clientsService.UpdateClients(Id, request, cancellationToken);
             return Ok(result);
         }
-
+        [Authorize (Roles = "Admin")]
         [HttpDelete("delete{id:guid}")]
         public async Task<IActionResult> DeleteClients(Guid Id, CancellationToken cancellationToken)
         {

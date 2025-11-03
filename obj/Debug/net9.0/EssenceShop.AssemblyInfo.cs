@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EssenceShop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fef6d8bf21e9177fd5e6973ebd91312481d5083d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d92430aaa40e040380073279a8921ae8db1a011b")]
 [assembly: System.Reflection.AssemblyProductAttribute("EssenceShop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EssenceShop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

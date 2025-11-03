@@ -25,7 +25,7 @@ namespace EssenceShop.Service
                     ClientId = Guid.NewGuid(),
                     FirstName = request.FirstName,
                     OtherName = request.OtherName,
-                    Email = request.Email,
+                     Email = request.Email,
                     Address = request.Address
 
                 };
@@ -103,7 +103,7 @@ namespace EssenceShop.Service
             {
                 response.IsSuccess = false;
                 response.Data = null;
-                response.Message = $"Error retrieving Clothe: {ex.Message}";
+                response.Message = $"Error retrieving client: {ex.Message}";
             }
 
             return response;
@@ -120,18 +120,18 @@ namespace EssenceShop.Service
                 if (clients == null)
                 {
                     response.IsSuccess = false;
-                    response.Message = "User not found";
+                    response.Message = "Clients not found";
                     return response;
                 }
 
                 response.IsSuccess = true;
                 response.Data = clients;
-                response.Message = "User retrieved successfully";
+                response.Message = "Client retrieved successfully";
             }
             catch (Exception ex)
             {
                 response.IsSuccess = false;
-                response.Message = $"Error retrieving user: {ex.Message}";
+                response.Message = $"Error retrieving clients: {ex.Message}";
             }
 
             return response;
@@ -147,7 +147,7 @@ namespace EssenceShop.Service
                 if (clients == null)
                 {
                     response.IsSuccess = false;
-                    response.Message = " Clothes not found";
+                    response.Message = " clents not found";
                     return response;
                 }
 
