@@ -168,3 +168,13 @@ C:\Users\admas\source\repos\EssenceShop\EssenceShop\bin\Debug\net9.0\runtimes\wi
 C:\Users\admas\source\repos\EssenceShop\EssenceShop\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\admas\source\repos\EssenceShop\EssenceShop\obj\Debug\net9.0\EssenceShop.sourcelink.json
 C:\Users\admas\source\repos\EssenceShop\EssenceShop\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\admas\source\repos\EssenceShop\EssenceShop\bin\Debug\net9.0\Serilog.dll
+C:\Users\admas\source\repos\EssenceShop\EssenceShop\bin\Debug\net9.0\Serilog.AspNetCore.dll
+C:\Users\admas\source\repos\EssenceShop\EssenceShop\bin\Debug\net9.0\Serilog.Extensions.Hosting.dll
+C:\Users\admas\source\repos\EssenceShop\EssenceShop\bin\Debug\net9.0\Serilog.Extensions.Logging.dll
+C:\Users\admas\source\repos\EssenceShop\EssenceShop\bin\Debug\net9.0\Serilog.Formatting.Compact.dll
+C:\Users\admas\source\repos\EssenceShop\EssenceShop\bin\Debug\net9.0\Serilog.Settings.Configuration.dll
+C:\Users\admas\source\repos\EssenceShop\EssenceShop\bin\Debug\net9.0\Serilog.Sinks.Console.dll
+C:\Users\admas\source\repos\EssenceShop\EssenceShop\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
+C:\Users\admas\source\repos\EssenceShop\EssenceShop\bin\Debug\net9.0\Serilog.Sinks.File.dll
+C:\Users\admas\source\repos\EssenceShop\EssenceShop\bin\Debug\net9.0\Serilog.Sinks.Seq.dll

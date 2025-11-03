@@ -172,14 +172,14 @@
         }
       }
     },
-    "/api/Clients/get-by-id{id}": {
+    "/api/Clients/get-by-id/{id}": {
       "get": {
         "tags": [
           "Clients"
         ],
         "parameters": [
           {
-            "name": "Id",
+            "name": "id",
             "in": "path",
             "required": true,
             "schema": {
@@ -291,7 +291,7 @@
         }
       }
     },
-    "/api/Clothes/Id:{id}": {
+    "/api/Clothes/get-by-id/{id}": {
       "get": {
         "tags": [
           "Clothes"
@@ -337,14 +337,14 @@
         }
       }
     },
-    "/api/Clothes/update{id}": {
+    "/api/Clothes/update/{id}": {
       "put": {
         "tags": [
           "Clothes"
         ],
         "parameters": [
           {
-            "name": "Id",
+            "name": "id",
             "in": "path",
             "required": true,
             "schema": {
@@ -391,7 +391,7 @@
         }
       }
     },
-    "/api/Clothes/delete{id}": {
+    "/api/Clothes/delete/{id}": {
       "delete": {
         "tags": [
           "Clothes"

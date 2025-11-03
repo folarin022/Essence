@@ -108,13 +108,13 @@
   {
     "ContainingType": "EssenceShop.Controllers.ClientsController",
     "Method": "GetClientsById",
-    "RelativePath": "api/Clients/get-by-id{id}",
+    "RelativePath": "api/Clients/get-by-id/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Guid",
         "IsRequired": true
       }
@@ -151,7 +151,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
+        "Name": "input",
         "Type": "EssenceShop.Dto.ClothesModel.CreateClothesDto",
         "IsRequired": true
       }
@@ -177,7 +177,7 @@
   {
     "ContainingType": "EssenceShop.Controllers.ClothesController",
     "Method": "DeleteClothe",
-    "RelativePath": "api/Clothes/delete{id}",
+    "RelativePath": "api/Clothes/delete/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -202,8 +202,8 @@
   },
   {
     "ContainingType": "EssenceShop.Controllers.ClothesController",
-    "Method": "GetClotheByID",
-    "RelativePath": "api/Clothes/Id:{id}",
+    "Method": "GetClotheById",
+    "RelativePath": "api/Clothes/get-by-id/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -219,13 +219,13 @@
   {
     "ContainingType": "EssenceShop.Controllers.ClothesController",
     "Method": "UpdateClothe",
-    "RelativePath": "api/Clothes/update{id}",
+    "RelativePath": "api/Clothes/update/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Guid",
         "IsRequired": true
       },
