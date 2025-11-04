@@ -184,3 +184,184 @@ Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/
 2025-11-05 02:06:17.694 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
 2025-11-05 02:06:18.021 +13:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 160.7609 ms
 2025-11-05 02:06:18.025 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 361.8718ms
+2025-11-05 02:25:18.350 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 02:25:19.202 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 02:25:19.204 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-05 02:25:19.391 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 202.1486ms
+2025-11-05 02:25:19.491 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 317.1128ms
+2025-11-05 02:25:19.569 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-05 02:25:19.872 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 02:25:19.873 +13:00 [INF] Hosting environment: Development
+2025-11-05 02:25:19.874 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 02:25:20.429 +13:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 491.2097 ms
+2025-11-05 02:25:20.438 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 868.8332ms
+2025-11-05 02:25:28.760 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/api/v1/Clothes/get-all - null null
+2025-11-05 02:25:28.882 +13:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-05 02:25:28.915 +13:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-05 02:25:28.918 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/api/v1/Clothes/get-all - 401 null null 167.8395ms
+2025-11-05 03:30:21.140 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 03:30:21.600 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 03:30:21.601 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-05 03:30:21.781 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 192.8883ms
+2025-11-05 03:30:21.851 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 265.9705ms
+2025-11-05 03:30:21.960 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 03:30:21.960 +13:00 [INF] Hosting environment: Development
+2025-11-05 03:30:21.961 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 03:30:22.256 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-05 03:30:22.478 +13:00 [ERR] HTTP GET /swagger/v1/swagger.json responded 500 in 12.4781 ms
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/v1/Clients" for actions - EssenceShop.Controllers.v2.ClientsController.RegisterClients (EssenceShop), EssenceShop.Controllers.V1.ClientsController.RegisterClients (EssenceShop). Actions require a unique method/path combination for Swagger/OpenAPI 2.0 and 3.0. Use ConflictingActionsResolver as a workaround or provide your own implementation of PathGroupSelector.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.IteratorSelectIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`4 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-11-05 03:30:22.487 +13:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/v1/Clients" for actions - EssenceShop.Controllers.v2.ClientsController.RegisterClients (EssenceShop), EssenceShop.Controllers.V1.ClientsController.RegisterClients (EssenceShop). Actions require a unique method/path combination for Swagger/OpenAPI 2.0 and 3.0. Use ConflictingActionsResolver as a workaround or provide your own implementation of PathGroupSelector.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.IteratorSelectIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`4 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-05 03:30:22.511 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 254.8995ms
+2025-11-05 03:40:54.014 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 03:40:54.510 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 03:40:54.511 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-05 03:40:54.629 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 129.5182ms
+2025-11-05 03:40:54.739 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 243.0698ms
+2025-11-05 03:40:54.848 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 03:40:54.848 +13:00 [INF] Hosting environment: Development
+2025-11-05 03:40:54.848 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 03:40:54.933 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-05 03:40:55.113 +13:00 [ERR] HTTP GET /swagger/v1/swagger.json responded 500 in 13.1116 ms
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/v1/Clients" for actions - EssenceShop.Controllers.v2.ClientsController.RegisterClients (EssenceShop), EssenceShop.Controllers.V1.ClientsController.RegisterClients (EssenceShop). Actions require a unique method/path combination for Swagger/OpenAPI 2.0 and 3.0. Use ConflictingActionsResolver as a workaround or provide your own implementation of PathGroupSelector.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.IteratorSelectIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`4 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-11-05 03:40:55.121 +13:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/v1/Clients" for actions - EssenceShop.Controllers.v2.ClientsController.RegisterClients (EssenceShop), EssenceShop.Controllers.V1.ClientsController.RegisterClients (EssenceShop). Actions require a unique method/path combination for Swagger/OpenAPI 2.0 and 3.0. Use ConflictingActionsResolver as a workaround or provide your own implementation of PathGroupSelector.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.IteratorSelectIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`4 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-05 03:40:55.144 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 210.9396ms
+2025-11-05 04:11:06.832 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 04:11:07.319 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 04:11:07.320 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-05 04:11:07.477 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 171.8253ms
+2025-11-05 04:11:07.547 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 252.6302ms
+2025-11-05 04:11:07.636 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-05 04:11:07.689 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 04:11:07.689 +13:00 [INF] Hosting environment: Development
+2025-11-05 04:11:07.690 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 04:11:07.937 +13:00 [ERR] HTTP GET /swagger/v1/swagger.json responded 500 in 110.0540 ms
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/v1/Clients" for actions - EssenceShop.Controllers.v2.ClientsController.RegisterClients (EssenceShop), EssenceShop.Controllers.V1.ClientsController.RegisterClients (EssenceShop). Actions require a unique method/path combination for Swagger/OpenAPI 2.0 and 3.0. Use ConflictingActionsResolver as a workaround or provide your own implementation of PathGroupSelector.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.IteratorSelectIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`4 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-11-05 04:11:07.979 +13:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/v1/Clients" for actions - EssenceShop.Controllers.v2.ClientsController.RegisterClients (EssenceShop), EssenceShop.Controllers.V1.ClientsController.RegisterClients (EssenceShop). Actions require a unique method/path combination for Swagger/OpenAPI 2.0 and 3.0. Use ConflictingActionsResolver as a workaround or provide your own implementation of PathGroupSelector.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.IteratorSelectIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`4 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-05 04:11:07.999 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 363.3164ms
+2025-11-05 04:37:39.375 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 04:37:40.351 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-05 04:37:40.350 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 04:37:40.653 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 309.0636ms
+2025-11-05 04:37:40.852 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 523.5948ms
+2025-11-05 04:37:40.948 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-05 04:37:40.979 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 04:37:40.979 +13:00 [INF] Hosting environment: Development
+2025-11-05 04:37:40.979 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 04:37:41.689 +13:00 [ERR] HTTP GET /swagger/v1/swagger.json responded 500 in 225.3593 ms
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/v1/Clients" for actions - EssenceShop.Controllers.v2.ClientsController.RegisterClients (EssenceShop), EssenceShop.Controllers.V1.ClientsController.RegisterClients (EssenceShop). Actions require a unique method/path combination for Swagger/OpenAPI 2.0 and 3.0. Use ConflictingActionsResolver as a workaround or provide your own implementation of PathGroupSelector.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.IteratorSelectIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`4 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-11-05 04:37:41.759 +13:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/v1/Clients" for actions - EssenceShop.Controllers.v2.ClientsController.RegisterClients (EssenceShop), EssenceShop.Controllers.V1.ClientsController.RegisterClients (EssenceShop). Actions require a unique method/path combination for Swagger/OpenAPI 2.0 and 3.0. Use ConflictingActionsResolver as a workaround or provide your own implementation of PathGroupSelector.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.IteratorSelectIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`4 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-05 04:37:41.813 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 865.6542ms
+2025-11-05 04:53:41.053 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 04:53:41.421 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-05 04:53:41.421 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 04:53:41.526 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 77.5215ms
+2025-11-05 04:53:41.583 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 174.32ms
+2025-11-05 04:53:41.664 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-05 04:53:41.819 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 04:53:41.819 +13:00 [INF] Hosting environment: Development
+2025-11-05 04:53:41.819 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 04:53:42.015 +13:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 168.6690 ms
+2025-11-05 04:53:42.027 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 363.7511ms
+2025-11-05 04:55:59.295 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 04:55:59.724 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-05 04:55:59.723 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 04:55:59.793 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 79.4786ms
+2025-11-05 04:55:59.907 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 197.2602ms
+2025-11-05 04:55:59.984 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-05 04:56:00.016 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 04:56:00.016 +13:00 [INF] Hosting environment: Development
+2025-11-05 04:56:00.016 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 04:56:00.381 +13:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 157.9424 ms
+2025-11-05 04:56:00.392 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 407.7931ms
+2025-11-05 04:57:16.493 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 04:57:16.942 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 04:57:16.948 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-05 04:57:17.073 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 136.4895ms
+2025-11-05 04:57:17.136 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 207.2476ms
+2025-11-05 04:57:17.206 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-05 04:57:17.347 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 04:57:17.348 +13:00 [INF] Hosting environment: Development
+2025-11-05 04:57:17.348 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 04:57:17.606 +13:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 211.0359 ms
+2025-11-05 04:57:17.611 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 404.4811ms

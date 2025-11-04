@@ -17,7 +17,7 @@ namespace EssenceShop.Controllers
         private readonly EssenceDbContext _dbContext;
         private readonly JwtService _jwtService;
         private readonly ILogger<AuthController> _logger;
-        private const string HmacKey = "ThisIsASecretKeyForHMAC"; // Must match across register/login
+        private const string HmacKey = "ThisIsASecretKeyForHMAC"; 
 
         public AuthController(EssenceDbContext dbContext, JwtService jwtService, ILogger<AuthController> logger)
         {

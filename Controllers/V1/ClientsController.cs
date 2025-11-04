@@ -1,4 +1,5 @@
-﻿using EssenceShop.Dto.ClientsModel;
+﻿using EssenceShop.Dto;
+using EssenceShop.Dto.ClientsModel;
 using EssenceShop.Service.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -9,7 +10,6 @@ namespace EssenceShop.Controllers.V1
     [ApiController]
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
-   
 
     public class ClientsController : ControllerBase
     {
@@ -23,29 +23,26 @@ namespace EssenceShop.Controllers.V1
         }
 
 
-        
+
 
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> RegisterClients(CreateClientDto input, CancellationToken cancellationToken)
         {
-            _logger.LogInformation("Admin {User} is registering a new client with name {ClientName}",
-                User.Identity?.Name, input.FirstName);
+            if (!ModelState.IsValid)
+                return BadRequest(new BaseResponse<bool>
+                {
+                    IsSuccess = false,
+                    Message = "Invalid product data"
+                });
 
-            try
-            {
-                await _clientsService.AddClients(input, cancellationToken);
-                _logger.LogInformation("Client {ClientName} registered successfully by {User}",
-                    input.FirstName, User.Identity?.Name);
+            var response = await _clientsService.AddClients(input, cancellationToken);
 
-                return Ok("Client registered successfully.");
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error while registering client {ClientName}", input.FirstName);
-                return StatusCode(500, "An error occurred while registering the client.");
-            }
+            if (!response.IsSuccess)
+                return BadRequest(response);
+
+            return Ok(response);
         }
 
 
@@ -54,11 +51,7 @@ namespace EssenceShop.Controllers.V1
         [HttpGet("clients")]
         public async Task<IActionResult> GetAllClients(CancellationToken cancellationToken)
         {
-            _logger.LogInformation("User {User} requested all clients", User.Identity?.Name);
-
             var response = await _clientsService.GetAllClients(cancellationToken);
-
-            _logger.LogInformation("Fetched {Count} clients successfully", response.Data.Count);
             return Ok(response);
 
         }
@@ -68,30 +61,18 @@ namespace EssenceShop.Controllers.V1
         [HttpGet("get-by-id/{id:guid}")]
         public async Task<IActionResult> GetClientsById(Guid id, CancellationToken cancellationToken)
         {
-            _logger.LogInformation("Admin {User} requested client details for ID {ClientId}",
-                User.Identity?.Name, id);
+            var response = await _clientsService.GetClientsById(id, cancellationToken);
 
-            try
+            if (response == null)
             {
-                var response = await _clientsService.GetClientsById(id, cancellationToken);
-
-                if (response == null)
+                return NotFound(new
                 {
-                    _logger.LogWarning("Client with ID {ClientId} not found. Requested by {User}",
-                        id, User.Identity?.Name);
-                    return NotFound(new { message = $"Client with ID {id} was not found." });
-                }
-
-                _logger.LogInformation("Client with ID {ClientId} retrieved successfully by {User}",
-                    id, User.Identity?.Name);
-
-                return Ok(response);
+                    message = $"Product with ID {id} was not found."
+                });
             }
-            catch (Exception ex)
+            else
             {
-                _logger.LogError(ex, "Error while retrieving client with ID {ClientId} by {User}",
-                    id, User.Identity?.Name);
-                return StatusCode(500, "An error occurred while fetching the client.");
+                return Ok(response);
             }
         }
 
@@ -99,31 +80,8 @@ namespace EssenceShop.Controllers.V1
         [HttpPut("update{id:guid}")]
         public async Task<IActionResult> UpdateClients(Guid Id, UpdateClientsDto request, CancellationToken cancellationToken)
         {
-            _logger.LogInformation("Admin {User} attempting to update client with ID {ClientId}",
-                User.Identity?.Name, Id);
-
-            try
-            {
-                var result = await _clientsService.UpdateClients(Id, request, cancellationToken);
-
-                if (result == null)
-                {
-                    _logger.LogWarning("Client with ID {ClientId} not found for update by {User}",
-                        Id, User.Identity?.Name);
-                    return NotFound(new { message = $"Client with ID {Id} not found." });
-                }
-
-                _logger.LogInformation("Client with ID {ClientId} updated successfully by {User}",
-                    Id, User.Identity?.Name);
-
-                return Ok(new { message = "Client updated successfully.", data = result });
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error while updating client with ID {ClientId} by {User}",
-                    Id, User.Identity?.Name);
-                return StatusCode(500, "An error occurred while updating the client.");
-            }
+            var result = await _clientsService.UpdateClients(Id, request, cancellationToken);
+            return Ok(result);
         }
 
 
@@ -132,15 +90,8 @@ namespace EssenceShop.Controllers.V1
         [HttpDelete("delete{id:guid}")]
         public async Task<IActionResult> DeleteClients(Guid Id, CancellationToken cancellationToken)
         {
-            _logger.LogWarning("Admin {User} attempting to delete client with ID {ClientId}",
-                User.Identity?.Name, Id);
-
             await _clientsService.DeleteClients(Id, cancellationToken);
-
-            _logger.LogInformation("Client with ID {ClientId} deleted successfully by {User}",
-                Id, User.Identity?.Name);
-
-            return Ok("Client deleted successfully.");
+            return Ok("Category deleted successfully.");
         }
 
     }

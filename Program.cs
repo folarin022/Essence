@@ -8,13 +8,10 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using System.Text;
-
-
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
@@ -24,13 +21,10 @@ Log.Logger = new LoggerConfiguration()
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 builder.Host.UseSerilog();
-
 
 builder.Services.AddDbContext<EssenceDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
 
 builder.Services.AddScoped<IClothesServices, ClothesService>();
 builder.Services.AddScoped<IClothesRepositries, ClothesRepositries>();
@@ -42,18 +36,19 @@ var key = Encoding.UTF8.GetBytes("THIS_IS_YOUR_SECRET_KEY_32_CHARS_MINIMUM");
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
-{
-options.TokenValidationParameters = new TokenValidationParameters
-{
-ValidateIssuer = false,
-ValidateAudience = false,
-ValidateLifetime = true,
-ValidateIssuerSigningKey = true,
-IssuerSigningKey = new SymmetricSecurityKey(key)
-};
-});
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = false,
+            ValidateAudience = false,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(key)
+        };
+    });
 
 builder.Services.AddAuthorization();
+
 
 
 builder.Services.AddApiVersioning(options =>
@@ -70,6 +65,7 @@ builder.Services.AddVersionedApiExplorer(options =>
 });
 
 
+
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo
@@ -79,14 +75,7 @@ builder.Services.AddSwaggerGen(options =>
         Description = "EssenceShop API - Version 1"
     });
 
-    options.SwaggerDoc("v2", new OpenApiInfo
-    {
-        Version = "v2",
-        Title = "EssenceShop API v2",
-        Description = "EssenceShop API - Version 2"
-    });
-
-
+    
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -96,9 +85,6 @@ builder.Services.AddSwaggerGen(options =>
         In = ParameterLocation.Header,
         Description = "Enter 'Bearer' followed by your JWT token."
     });
-
-
-
 
     options.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
@@ -116,23 +102,13 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
-
-
-
-
-
-
-
 var app = builder.Build();
 
-var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
-
 app.UseHttpsRedirection();
-
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.UseSerilogRequestLogging();
+
 
 if (app.Environment.IsDevelopment())
 {
@@ -140,12 +116,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(options =>
     {
         options.SwaggerEndpoint("/swagger/v1/swagger.json", "EssenceShop API v1");
-        options.SwaggerEndpoint("/swagger/v2/swagger.json", "EssenceShop API v2");
     });
-
-
-    app.MapControllers();
-
-    app.Run();
 }
 
+
+
+app.MapControllers();
+app.Run();
