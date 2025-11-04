@@ -1,172 +1,12 @@
 {
   "openapi": "3.0.4",
   "info": {
-    "title": "EssenceShop API v1",
-    "description": "EssenceShop API - Version 1",
-    "version": "v1"
+    "title": "EssenceShop API v2",
+    "description": "EssenceShop API - Version 2",
+    "version": "v2"
   },
   "paths": {
-    "/api/Admin/register": {
-      "post": {
-        "tags": [
-          "Admin"
-        ],
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AdminLoginDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AdminLoginDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/AdminLoginDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Admin/login": {
-      "post": {
-        "tags": [
-          "Admin"
-        ],
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AdminLoginDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AdminLoginDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/AdminLoginDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Auth/register": {
-      "post": {
-        "tags": [
-          "Auth"
-        ],
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RegisterUserDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RegisterUserDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/RegisterUserDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Auth/login": {
-      "post": {
-        "tags": [
-          "Auth"
-        ],
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoginUserDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoginUserDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoginUserDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/v1/Clients": {
+    "/api/v2/Clients": {
       "post": {
         "tags": [
           "Clients"
@@ -197,7 +37,7 @@
         }
       }
     },
-    "/api/v1/Clients/clients": {
+    "/api/v2/Clients/clients": {
       "get": {
         "tags": [
           "Clients"
@@ -209,7 +49,7 @@
         }
       }
     },
-    "/api/v1/Clients/get-by-id/{id}": {
+    "/api/v2/Clients/get-by-id/{id}": {
       "get": {
         "tags": [
           "Clients"
@@ -232,7 +72,7 @@
         }
       }
     },
-    "/api/v1/Clients/update{id}": {
+    "/api/v2/Clients/update{id}": {
       "put": {
         "tags": [
           "Clients"
@@ -274,7 +114,7 @@
         }
       }
     },
-    "/api/v1/Clients/delete{id}": {
+    "/api/v2/Clients/delete{id}": {
       "delete": {
         "tags": [
           "Clients"
@@ -297,7 +137,7 @@
         }
       }
     },
-    "/api/v1/Clothes": {
+    "/api/v2/Clothes": {
       "post": {
         "tags": [
           "Clothes"
@@ -328,7 +168,7 @@
         }
       }
     },
-    "/api/v1/Clothes/get-by-id/{id}": {
+    "/api/v2/Clothes/get-by-id/{id}": {
       "get": {
         "tags": [
           "Clothes"
@@ -351,7 +191,7 @@
         }
       }
     },
-    "/api/v1/Clothes/collect/{id}": {
+    "/api/v2/Clothes/collect/{id}": {
       "put": {
         "tags": [
           "Clothes"
@@ -374,7 +214,7 @@
         }
       }
     },
-    "/api/v1/Clothes/update/{id}": {
+    "/api/v2/Clothes/update/{id}": {
       "put": {
         "tags": [
           "Clothes"
@@ -416,7 +256,7 @@
         }
       }
     },
-    "/api/v1/Clothes/get-all": {
+    "/api/v2/Clothes/get-all": {
       "get": {
         "tags": [
           "Clothes"
@@ -428,7 +268,7 @@
         }
       }
     },
-    "/api/v1/Clothes/delete/{id}": {
+    "/api/v2/Clothes/delete/{id}": {
       "delete": {
         "tags": [
           "Clothes"
@@ -454,29 +294,6 @@
   },
   "components": {
     "schemas": {
-      "AdminLoginDto": {
-        "required": [
-          "email",
-          "password"
-        ],
-        "type": "object",
-        "properties": {
-          "username": {
-            "maxLength": 50,
-            "type": "string",
-            "nullable": true
-          },
-          "email": {
-            "minLength": 8,
-            "type": "string"
-          },
-          "password": {
-            "minLength": 1,
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
       "CreateClientDto": {
         "required": [
           "address",
@@ -533,45 +350,6 @@
           "amountPaid": {
             "type": "number",
             "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
-      "LoginUserDto": {
-        "type": "object",
-        "properties": {
-          "email": {
-            "type": "string",
-            "format": "email",
-            "nullable": true
-          },
-          "password": {
-            "minLength": 8,
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "RegisterUserDto": {
-        "required": [
-          "email",
-          "username"
-        ],
-        "type": "object",
-        "properties": {
-          "username": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "email": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "password": {
-            "minLength": 8,
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false

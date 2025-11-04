@@ -1,0 +1,186 @@
+2025-11-05 00:46:29.295 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 00:46:29.950 +13:00 [INF] Now listening on: https://localhost:7024
+2025-11-05 00:46:29.952 +13:00 [INF] Now listening on: http://localhost:5000
+2025-11-05 00:46:30.150 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 00:46:30.154 +13:00 [INF] Hosting environment: Development
+2025-11-05 00:46:30.154 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 00:46:31.421 +13:00 [INF] Request starting HTTP/2 GET https://localhost:7024/_vs/browserLink - null null
+2025-11-05 00:46:31.420 +13:00 [INF] Request starting HTTP/2 GET https://localhost:7024/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 00:46:31.532 +13:00 [INF] Request finished HTTP/2 GET https://localhost:7024/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 106.5722ms
+2025-11-05 00:46:31.716 +13:00 [INF] Request finished HTTP/2 GET https://localhost:7024/_vs/browserLink - 200 null text/javascript; charset=UTF-8 306.582ms
+2025-11-05 00:46:31.798 +13:00 [INF] Request starting HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - null null
+2025-11-05 00:46:31.935 +13:00 [INF] Request finished HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 137.2317ms
+2025-11-05 00:54:18.098 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 00:54:18.569 +13:00 [INF] Now listening on: https://localhost:7024
+2025-11-05 00:54:18.572 +13:00 [INF] Now listening on: http://localhost:5000
+2025-11-05 00:54:18.747 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 00:54:18.758 +13:00 [INF] Hosting environment: Development
+2025-11-05 00:54:18.759 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 00:54:19.426 +13:00 [INF] Request starting HTTP/2 GET https://localhost:7024/_vs/browserLink - null null
+2025-11-05 00:54:19.426 +13:00 [INF] Request starting HTTP/2 GET https://localhost:7024/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 00:54:19.514 +13:00 [INF] Request finished HTTP/2 GET https://localhost:7024/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 100.6522ms
+2025-11-05 00:54:19.589 +13:00 [INF] Request finished HTTP/2 GET https://localhost:7024/_vs/browserLink - 200 null text/javascript; charset=UTF-8 177.9368ms
+2025-11-05 00:54:19.660 +13:00 [INF] Request starting HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - null null
+2025-11-05 00:54:19.831 +13:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/v{version}/Clients" for actions - EssenceShop.Controllers.V2.ClientsController.RegisterClients (EssenceShop), EssenceShop.Controllers.V1.ClientsController.RegisterClients (EssenceShop). Actions require a unique method/path combination for Swagger/OpenAPI 2.0 and 3.0. Use ConflictingActionsResolver as a workaround or provide your own implementation of PathGroupSelector.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.IteratorSelectIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`4 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-05 00:54:19.856 +13:00 [INF] Request finished HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 195.4439ms
+2025-11-05 00:54:35.924 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 00:54:36.332 +13:00 [INF] Now listening on: https://localhost:7024
+2025-11-05 00:54:36.334 +13:00 [INF] Now listening on: http://localhost:5000
+2025-11-05 00:54:51.533 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 00:54:51.922 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-05 00:54:51.922 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 00:54:52.021 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 102.6634ms
+2025-11-05 00:54:52.070 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 156.2878ms
+2025-11-05 00:54:52.134 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-05 00:54:52.172 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 00:54:52.172 +13:00 [INF] Hosting environment: Development
+2025-11-05 00:54:52.172 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 00:54:52.321 +13:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/v{version}/Clients" for actions - EssenceShop.Controllers.V2.ClientsController.RegisterClients (EssenceShop), EssenceShop.Controllers.V1.ClientsController.RegisterClients (EssenceShop). Actions require a unique method/path combination for Swagger/OpenAPI 2.0 and 3.0. Use ConflictingActionsResolver as a workaround or provide your own implementation of PathGroupSelector.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.IteratorSelectIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`4 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-05 00:54:52.360 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 225.9946ms
+2025-11-05 00:59:19.183 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 00:59:19.558 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-05 00:59:19.557 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 00:59:19.713 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 164.4744ms
+2025-11-05 00:59:19.886 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 339.9043ms
+2025-11-05 00:59:19.993 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-05 00:59:20.213 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 219.6687ms
+2025-11-05 00:59:20.272 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 00:59:20.273 +13:00 [INF] Hosting environment: Development
+2025-11-05 00:59:20.273 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 01:04:01.601 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 01:04:01.968 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 01:04:01.967 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-05 01:04:02.097 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 131.881ms
+2025-11-05 01:04:02.138 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 181.8211ms
+2025-11-05 01:04:02.198 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-05 01:04:02.254 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 01:04:02.255 +13:00 [INF] Hosting environment: Development
+2025-11-05 01:04:02.255 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 01:04:02.425 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 226.2377ms
+2025-11-05 01:14:27.282 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 01:14:27.604 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-05 01:14:27.603 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 01:14:27.692 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 95.0193ms
+2025-11-05 01:14:27.825 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 231.5916ms
+2025-11-05 01:14:27.853 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-05 01:14:27.933 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 01:14:27.947 +13:00 [INF] Hosting environment: Development
+2025-11-05 01:14:27.947 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 01:17:02.242 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 01:17:02.596 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-05 01:17:02.596 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 01:17:02.721 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 132.9121ms
+2025-11-05 01:17:02.776 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 190.6107ms
+2025-11-05 01:17:02.839 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-05 01:17:02.912 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 01:17:02.913 +13:00 [INF] Hosting environment: Development
+2025-11-05 01:17:02.913 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 01:22:39.792 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 01:22:40.134 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-05 01:22:40.134 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 01:22:40.233 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 106.5707ms
+2025-11-05 01:22:40.323 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 199.6353ms
+2025-11-05 01:22:40.388 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-05 01:22:40.431 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 01:22:40.431 +13:00 [INF] Hosting environment: Development
+2025-11-05 01:22:40.431 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 01:22:40.588 +13:00 [INF] HTTP GET /swagger/v1/swagger.json responded 404 in 2.3840 ms
+2025-11-05 01:22:40.594 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 404 null null 207.973ms
+2025-11-05 01:22:40.596 +13:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44377/swagger/v1/swagger.json, Response status code: 404
+2025-11-05 01:34:30.045 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 01:34:30.875 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-05 01:34:30.873 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 01:34:31.035 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 173.2943ms
+2025-11-05 01:34:31.379 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 523.2763ms
+2025-11-05 01:34:31.521 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-05 01:34:31.588 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 01:34:31.589 +13:00 [INF] Hosting environment: Development
+2025-11-05 01:34:31.589 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 01:34:31.859 +13:00 [INF] HTTP GET /swagger/v1/swagger.json responded 404 in 4.5436 ms
+2025-11-05 01:34:31.886 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 404 null null 364.8934ms
+2025-11-05 01:34:31.891 +13:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44377/swagger/v1/swagger.json, Response status code: 404
+2025-11-05 01:36:51.427 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 01:36:52.111 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-05 01:36:52.113 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 01:36:52.287 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 189.9787ms
+2025-11-05 01:36:52.385 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 292.0786ms
+2025-11-05 01:36:52.498 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-05 01:36:52.609 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 01:36:52.609 +13:00 [INF] Hosting environment: Development
+2025-11-05 01:36:52.612 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 01:36:53.023 +13:00 [INF] HTTP GET /swagger/v1/swagger.json responded 404 in 1.1736 ms
+2025-11-05 01:36:53.034 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 404 null null 535.5236ms
+2025-11-05 01:36:53.038 +13:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44377/swagger/v1/swagger.json, Response status code: 404
+2025-11-05 01:47:20.871 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 01:47:21.254 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 01:47:21.254 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-05 01:47:21.325 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 73.0428ms
+2025-11-05 01:47:21.390 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 146.5862ms
+2025-11-05 01:47:21.453 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-05 01:47:21.503 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 01:47:21.504 +13:00 [INF] Hosting environment: Development
+2025-11-05 01:47:21.504 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 01:47:21.807 +13:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 179.1024 ms
+2025-11-05 01:47:21.823 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 369.9934ms
+2025-11-05 01:51:35.498 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 01:51:35.875 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-05 01:51:35.874 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 01:51:35.946 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 78.3287ms
+2025-11-05 01:51:36.034 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 169.6856ms
+2025-11-05 01:51:36.107 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 01:51:36.108 +13:00 [INF] Hosting environment: Development
+2025-11-05 01:51:36.108 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 01:51:36.127 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-05 01:51:36.409 +13:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 101.0028 ms
+2025-11-05 01:51:36.415 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 287.9129ms
+2025-11-05 01:54:17.620 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 01:54:18.087 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 01:54:18.087 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-05 01:54:18.189 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 95.8704ms
+2025-11-05 01:54:18.301 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 224.0404ms
+2025-11-05 01:54:18.323 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-05 01:54:18.472 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 01:54:18.472 +13:00 [INF] Hosting environment: Development
+2025-11-05 01:54:18.472 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 01:54:18.674 +13:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 163.0614 ms
+2025-11-05 01:54:18.678 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 355.3548ms
+2025-11-05 01:55:47.961 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 01:55:48.369 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 01:55:48.369 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-05 01:55:48.473 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 109.8206ms
+2025-11-05 01:55:48.514 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 152.8384ms
+2025-11-05 01:55:48.568 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-05 01:55:48.612 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 01:55:48.612 +13:00 [INF] Hosting environment: Development
+2025-11-05 01:55:48.643 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 01:55:48.958 +13:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 124.0863 ms
+2025-11-05 01:55:48.962 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 394.3042ms
+2025-11-05 02:06:16.997 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 02:06:17.381 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-05 02:06:17.381 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 02:06:17.473 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 99.7104ms
+2025-11-05 02:06:17.559 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 189.0813ms
+2025-11-05 02:06:17.664 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-05 02:06:17.694 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 02:06:17.694 +13:00 [INF] Hosting environment: Development
+2025-11-05 02:06:17.694 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-05 02:06:18.021 +13:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 160.7609 ms
+2025-11-05 02:06:18.025 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 361.8718ms

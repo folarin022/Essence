@@ -178,3 +178,5 @@ C:\Users\admas\source\repos\EssenceShop\EssenceShop\bin\Debug\net9.0\Serilog.Sin
 C:\Users\admas\source\repos\EssenceShop\EssenceShop\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
 C:\Users\admas\source\repos\EssenceShop\EssenceShop\bin\Debug\net9.0\Serilog.Sinks.File.dll
 C:\Users\admas\source\repos\EssenceShop\EssenceShop\bin\Debug\net9.0\Serilog.Sinks.Seq.dll
+C:\Users\admas\source\repos\EssenceShop\EssenceShop\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+C:\Users\admas\source\repos\EssenceShop\EssenceShop\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll

@@ -3,11 +3,12 @@ using EssenceShop.Service.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EssenceShop.Controllers
+namespace EssenceShop.Controllers.V2
 {
     [Authorize]
-    [Route("api/[controller]")]
     [ApiController]
+    [ApiVersion("2.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
 
     public class ClientsController : ControllerBase
     {

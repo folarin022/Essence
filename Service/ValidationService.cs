@@ -8,7 +8,8 @@ namespace EssenceShop.Services
             Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
 
         public static bool IsValidPassword(string password) =>
-             Regex.IsMatch(password, @"^(?=.*[a-z] [A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?""':{}|<>]).{8,}$");
+    Regex.IsMatch(password, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?""':{}|<>]).{8,}$");
+
 
 
     }

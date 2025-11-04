@@ -1,4 +1,5 @@
-﻿using EssenceShop.Context;
+﻿using Azure;
+using EssenceShop.Context;
 using EssenceShop.Data;
 using EssenceShop.Dto.AuthModel;
 using EssenceShop.Services;
@@ -46,8 +47,15 @@ namespace EssenceShop.Controllers
             {
                 Username = request.Username,
                 PasswordHash = passwordHash,
+                Email = request.Email,
                 Role = "Admin"
             };
+
+            if (!ValidationService.IsValidEmail(request.Email))
+                return BadRequest("Invalid email format.");
+
+            if (!ValidationService.IsValidPassword(request.Password))
+                return BadRequest("Password must contain lowercase letters, numbers, and a symbol.");
 
             _dbContext.Admins.Add(admin);
             await _dbContext.SaveChangesAsync();

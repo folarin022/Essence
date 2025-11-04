@@ -33,7 +33,7 @@ namespace EssenceShop.Service
 
             try
             {
-                _logger.LogInformation("Starting to add a new clothe for client {ClientName}", request.ClientsName);
+                _logger.LogInformation("starting to add a new clothe {clothe}", request.ClientsName);
 
                 var clothesAmount = new ClothesAmount { PricePerCloth = 400m };
                 var total = request.Quantity * clothesAmount.PricePerCloth;
@@ -56,9 +56,9 @@ namespace EssenceShop.Service
                     "Clothe '{ClotheName}' added successfully for {ClientName}. Total: {Total}, Paid: {Paid}, Balance: {Balance}",
                     clothe.ClotheName, clothe.ClientsName, clothe.totalPrice, clothe.AmountPaid, clothe.Balance);
 
-                response.IsSuccess = true;
+                response.IsSuccess = true; 
                 response.Data = clothe;
-                response.Message = "Clothe created successfully.";
+                response.Message = "Clothe retrieved successfully";
             }
             catch (Exception ex)
             {

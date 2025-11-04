@@ -5,13 +5,17 @@ using EssenceShop.Service;
 using EssenceShop.Service.Interface;
 using EssenceShop.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using System.Text;
 
-// --- Serilog configuration ---
+
+
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .WriteTo.File("Logs/log-.txt", rollingInterval: RollingInterval.Day)
@@ -20,22 +24,81 @@ Log.Logger = new LoggerConfiguration()
 
 var builder = WebApplication.CreateBuilder(args);
 
-// --- Use Serilog for logging ---
+
 builder.Host.UseSerilog();
 
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddDbContext<EssenceDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+builder.Services.AddScoped<IClothesServices, ClothesService>();
+builder.Services.AddScoped<IClothesRepositries, ClothesRepositries>();
+builder.Services.AddScoped<IClientsService, ClientsService>();
+builder.Services.AddScoped<IClientsRepositries, ClientsRepositries>();
+builder.Services.AddScoped<JwtService>();
+
+var key = Encoding.UTF8.GetBytes("THIS_IS_YOUR_SECRET_KEY_32_CHARS_MINIMUM");
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+{
+options.TokenValidationParameters = new TokenValidationParameters
+{
+ValidateIssuer = false,
+ValidateAudience = false,
+ValidateLifetime = true,
+ValidateIssuerSigningKey = true,
+IssuerSigningKey = new SymmetricSecurityKey(key)
+};
+});
+
+builder.Services.AddAuthorization();
+
+
+builder.Services.AddApiVersioning(options =>
+{
+    options.DefaultApiVersion = new ApiVersion(1, 0);
+    options.AssumeDefaultVersionWhenUnspecified = true;
+    options.ReportApiVersions = true;
+});
+
+builder.Services.AddVersionedApiExplorer(options =>
+{
+    options.GroupNameFormat = "'v'VVV";
+    options.SubstituteApiVersionInUrl = true;
+});
+
 
 builder.Services.AddSwaggerGen(options =>
 {
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Version = "v1",
+        Title = "EssenceShop API v1",
+        Description = "EssenceShop API - Version 1"
+    });
+
+    options.SwaggerDoc("v2", new OpenApiInfo
+    {
+        Version = "v2",
+        Title = "EssenceShop API v2",
+        Description = "EssenceShop API - Version 2"
+    });
+
+
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
-        In = ParameterLocation.Header,
-        Description = "Enter JWT token with Bearer prefix. Example: Bearer {your token}",
         Name = "Authorization",
         Type = SecuritySchemeType.ApiKey,
-        Scheme = "Bearer"
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "Enter 'Bearer' followed by your JWT token."
     });
+
+
+
 
     options.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
@@ -48,53 +111,41 @@ builder.Services.AddSwaggerGen(options =>
                     Id = "Bearer"
                 }
             },
-            new string[] {}
+            Array.Empty<string>()
         }
     });
 });
 
-var key = Encoding.UTF8.GetBytes("THIS_IS_YOUR_SECRET_KEY_32_CHARS_MINIMUM");
 
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options =>
-    {
-        options.TokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateIssuer = false,
-            ValidateAudience = false,
-            ValidateLifetime = true,
-            ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(key)
-        };
-    });
 
-builder.Services.AddAuthorization();
 
-builder.Services.AddScoped<JwtService>();
 
-builder.Services.AddDbContext<EssenceDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddScoped<IClothesServices, ClothesService>();
-builder.Services.AddScoped<IClothesRepositries, ClothesRepositries>();
-builder.Services.AddScoped<IClientsService, ClientsService>();
-builder.Services.AddScoped<IClientsRepositries, ClientsRepositries>();
+
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
 
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.UseSerilogRequestLogging(); // logs each HTTP request
+app.UseSerilogRequestLogging();
 
-app.MapControllers();
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "EssenceShop API v1");
+        options.SwaggerEndpoint("/swagger/v2/swagger.json", "EssenceShop API v2");
+    });
 
-app.Run();
+
+    app.MapControllers();
+
+    app.Run();
+}
+

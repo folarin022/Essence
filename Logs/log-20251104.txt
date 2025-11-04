@@ -281,3 +281,496 @@ FROM [Clients] AS [c]
 2025-11-04 03:24:43.034 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.ClientsController.GetAllClients (EssenceShop)'
 2025-11-04 03:24:43.034 +13:00 [INF] HTTP GET /api/Clients/clients responded 200 in 116.8401 ms
 2025-11-04 03:24:43.035 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/api/Clients/clients - 200 null application/json; charset=utf-8 122.2566ms
+2025-11-04 09:25:28.271 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 09:25:28.629 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-04 09:25:28.632 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-04 09:25:28.754 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 124.8927ms
+2025-11-04 09:25:28.801 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 181.6947ms
+2025-11-04 09:25:28.854 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-04 09:25:28.862 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 09:25:28.863 +13:00 [INF] Hosting environment: Development
+2025-11-04 09:25:28.863 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-04 09:25:29.062 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 208.3801ms
+2025-11-04 09:25:49.740 +13:00 [INF] Request starting HTTP/2 POST https://localhost:44377/api/Admin/login - application/json 50
+2025-11-04 09:25:49.851 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AdminController.Login (EssenceShop)'
+2025-11-04 09:25:49.882 +13:00 [INF] Route matched with {action = "Login", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EssenceShop.Dto.AuthModel.AdminLoginDto) on controller EssenceShop.Controllers.AdminController (EssenceShop).
+2025-11-04 09:25:50.467 +13:00 [WRN] No instantiatable types implementing `IEntityTypeConfiguration` were found while while scanning assembly 'EssenceShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+2025-11-04 09:25:50.672 +13:00 [WRN] No store type was specified for the decimal property 'AmountPaid' on entity type 'Clothes'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-04 09:25:50.673 +13:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Clothes'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-04 09:25:50.673 +13:00 [WRN] No store type was specified for the decimal property 'pricePerCloth' on entity type 'Clothes'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-04 09:25:50.673 +13:00 [WRN] No store type was specified for the decimal property 'totalPrice' on entity type 'Clothes'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-04 09:25:52.997 +13:00 [INF] Executed DbCommand (91ms) [Parameters=[@__request_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Email], [a].[PasswordHash], [a].[Role], [a].[Username]
+FROM [Admins] AS [a]
+WHERE [a].[Username] = @__request_Username_0
+2025-11-04 09:25:53.198 +13:00 [INF] Admin 'Falz' logged in successfully at "2025-11-03T20:25:53.1980281Z"
+2025-11-04 09:25:53.211 +13:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-04 09:25:53.226 +13:00 [INF] Executed action EssenceShop.Controllers.AdminController.Login (EssenceShop) in 3337.8677ms
+2025-11-04 09:25:53.228 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AdminController.Login (EssenceShop)'
+2025-11-04 09:25:53.232 +13:00 [INF] HTTP POST /api/Admin/login responded 200 in 3380.3181 ms
+2025-11-04 09:25:53.254 +13:00 [INF] Request finished HTTP/2 POST https://localhost:44377/api/Admin/login - 200 null application/json; charset=utf-8 3514.6291ms
+2025-11-04 09:26:27.752 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/api/Clients/clients - null null
+2025-11-04 09:26:27.922 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.ClientsController.GetAllClients (EssenceShop)'
+2025-11-04 09:26:27.927 +13:00 [INF] Route matched with {action = "GetAllClients", controller = "Clients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllClients(System.Threading.CancellationToken) on controller EssenceShop.Controllers.ClientsController (EssenceShop).
+2025-11-04 09:26:27.932 +13:00 [INF] User Falz requested all clients
+2025-11-04 09:26:27.934 +13:00 [INF] Fetching all clients from database
+2025-11-04 09:26:28.042 +13:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Address], [c].[ClientId], [c].[Email], [c].[FirstName], [c].[OtherName]
+FROM [Clients] AS [c]
+2025-11-04 09:26:28.055 +13:00 [INF] 5 clients retrieved successfully
+2025-11-04 09:26:28.056 +13:00 [INF] Fetched 5 clients successfully
+2025-11-04 09:26:28.057 +13:00 [INF] Executing OkObjectResult, writing value of type 'EssenceShop.Dto.BaseResponse`1[[System.Collections.Generic.List`1[[EssenceShop.Data.Clients, EssenceShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-04 09:26:28.066 +13:00 [INF] Executed action EssenceShop.Controllers.ClientsController.GetAllClients (EssenceShop) in 139.0936ms
+2025-11-04 09:26:28.067 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.ClientsController.GetAllClients (EssenceShop)'
+2025-11-04 09:26:28.067 +13:00 [INF] HTTP GET /api/Clients/clients responded 200 in 144.8734 ms
+2025-11-04 09:26:28.068 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/api/Clients/clients - 200 null application/json; charset=utf-8 316.3524ms
+2025-11-04 09:27:19.475 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/api/Clients/get-by-id/753822d7-4f0f-44ec-f719-08de160b5c70 - null null
+2025-11-04 09:27:19.556 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.ClientsController.GetClientsById (EssenceShop)'
+2025-11-04 09:27:19.596 +13:00 [INF] Route matched with {action = "GetClientsById", controller = "Clients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetClientsById(System.Guid, System.Threading.CancellationToken) on controller EssenceShop.Controllers.ClientsController (EssenceShop).
+2025-11-04 09:27:19.615 +13:00 [INF] Admin Falz requested client details for ID "753822d7-4f0f-44ec-f719-08de160b5c70"
+2025-11-04 09:27:19.616 +13:00 [INF] Fetching client with ID: "753822d7-4f0f-44ec-f719-08de160b5c70"
+2025-11-04 09:27:19.693 +13:00 [INF] Executed DbCommand (3ms) [Parameters=[@__Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[ClientId], [c].[Email], [c].[FirstName], [c].[OtherName]
+FROM [Clients] AS [c]
+WHERE [c].[Id] = @__Id_0
+2025-11-04 09:27:19.694 +13:00 [INF] Client "753822d7-4f0f-44ec-f719-08de160b5c70" retrieved successfully
+2025-11-04 09:27:19.694 +13:00 [INF] Client with ID "753822d7-4f0f-44ec-f719-08de160b5c70" retrieved successfully by Falz
+2025-11-04 09:27:19.695 +13:00 [INF] Executing OkObjectResult, writing value of type 'EssenceShop.Dto.BaseResponse`1[[EssenceShop.Data.Clients, EssenceShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 09:27:19.696 +13:00 [INF] Executed action EssenceShop.Controllers.ClientsController.GetClientsById (EssenceShop) in 99.4642ms
+2025-11-04 09:27:19.696 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.ClientsController.GetClientsById (EssenceShop)'
+2025-11-04 09:27:19.696 +13:00 [INF] HTTP GET /api/Clients/get-by-id/753822d7-4f0f-44ec-f719-08de160b5c70 responded 200 in 140.5526 ms
+2025-11-04 09:27:19.698 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/api/Clients/get-by-id/753822d7-4f0f-44ec-f719-08de160b5c70 - 200 null application/json; charset=utf-8 222.675ms
+2025-11-04 09:30:40.153 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 09:30:40.504 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-04 09:30:40.507 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-04 09:30:40.574 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 74.6608ms
+2025-11-04 09:30:40.655 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 163.8175ms
+2025-11-04 09:30:40.675 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-04 09:30:40.732 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 09:30:40.733 +13:00 [INF] Hosting environment: Development
+2025-11-04 09:30:40.733 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-04 09:30:40.903 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 228.1577ms
+2025-11-04 09:31:21.230 +13:00 [INF] Request starting HTTP/2 POST https://localhost:44377/api/Auth/register - application/json 71
+2025-11-04 09:31:21.343 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AuthController.Register (EssenceShop)'
+2025-11-04 09:31:21.369 +13:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EssenceShop.Dto.AuthModel.RegisterUserDto) on controller EssenceShop.Controllers.AuthController (EssenceShop).
+2025-11-04 09:31:21.590 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-04 09:31:21.630 +13:00 [INF] Executed action EssenceShop.Controllers.AuthController.Register (EssenceShop) in 257.5731ms
+2025-11-04 09:31:21.631 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AuthController.Register (EssenceShop)'
+2025-11-04 09:31:21.633 +13:00 [INF] HTTP POST /api/Auth/register responded 400 in 290.2509 ms
+2025-11-04 09:31:21.638 +13:00 [INF] Request finished HTTP/2 POST https://localhost:44377/api/Auth/register - 400 null application/problem+json; charset=utf-8 408.1666ms
+2025-11-04 09:31:34.763 +13:00 [INF] Request starting HTTP/2 POST https://localhost:44377/api/Auth/register - application/json 76
+2025-11-04 09:31:34.768 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AuthController.Register (EssenceShop)'
+2025-11-04 09:31:34.769 +13:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EssenceShop.Dto.AuthModel.RegisterUserDto) on controller EssenceShop.Controllers.AuthController (EssenceShop).
+2025-11-04 09:31:35.129 +13:00 [WRN] No instantiatable types implementing `IEntityTypeConfiguration` were found while while scanning assembly 'EssenceShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+2025-11-04 09:31:35.332 +13:00 [WRN] No store type was specified for the decimal property 'AmountPaid' on entity type 'Clothes'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-04 09:31:35.333 +13:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Clothes'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-04 09:31:35.333 +13:00 [WRN] No store type was specified for the decimal property 'pricePerCloth' on entity type 'Clothes'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-04 09:31:35.333 +13:00 [WRN] No store type was specified for the decimal property 'totalPrice' on entity type 'Clothes'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-04 09:31:36.299 +13:00 [INF] Executed DbCommand (58ms) [Parameters=[@__request_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__request_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-04 09:31:36.331 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-11-04 09:31:36.332 +13:00 [INF] Executed action EssenceShop.Controllers.AuthController.Register (EssenceShop) in 1563.0375ms
+2025-11-04 09:31:36.333 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AuthController.Register (EssenceShop)'
+2025-11-04 09:31:36.334 +13:00 [INF] HTTP POST /api/Auth/register responded 400 in 1565.3606 ms
+2025-11-04 09:31:36.343 +13:00 [INF] Request finished HTTP/2 POST https://localhost:44377/api/Auth/register - 400 null text/plain; charset=utf-8 1591.9118ms
+2025-11-04 09:31:37.870 +13:00 [INF] Request starting HTTP/2 POST https://localhost:44377/api/Auth/register - application/json 76
+2025-11-04 09:31:37.878 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AuthController.Register (EssenceShop)'
+2025-11-04 09:31:37.878 +13:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EssenceShop.Dto.AuthModel.RegisterUserDto) on controller EssenceShop.Controllers.AuthController (EssenceShop).
+2025-11-04 09:31:37.941 +13:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__request_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-04 09:31:37.941 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-11-04 09:31:37.942 +13:00 [INF] Executed action EssenceShop.Controllers.AuthController.Register (EssenceShop) in 63.4177ms
+2025-11-04 09:31:37.942 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AuthController.Register (EssenceShop)'
+2025-11-04 09:31:37.942 +13:00 [INF] HTTP POST /api/Auth/register responded 400 in 64.3798 ms
+2025-11-04 09:31:37.943 +13:00 [INF] Request finished HTTP/2 POST https://localhost:44377/api/Auth/register - 400 null text/plain; charset=utf-8 73.9325ms
+2025-11-04 09:31:57.352 +13:00 [INF] Request starting HTTP/2 POST https://localhost:44377/api/Auth/register - application/json 81
+2025-11-04 09:31:57.353 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AuthController.Register (EssenceShop)'
+2025-11-04 09:31:57.353 +13:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EssenceShop.Dto.AuthModel.RegisterUserDto) on controller EssenceShop.Controllers.AuthController (EssenceShop).
+2025-11-04 09:31:57.426 +13:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__request_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-04 09:31:57.426 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-11-04 09:31:57.428 +13:00 [INF] Executed action EssenceShop.Controllers.AuthController.Register (EssenceShop) in 74.3155ms
+2025-11-04 09:31:57.429 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AuthController.Register (EssenceShop)'
+2025-11-04 09:31:57.429 +13:00 [INF] HTTP POST /api/Auth/register responded 400 in 76.4937 ms
+2025-11-04 09:31:57.431 +13:00 [INF] Request finished HTTP/2 POST https://localhost:44377/api/Auth/register - 400 null text/plain; charset=utf-8 79.1841ms
+2025-11-04 09:32:18.457 +13:00 [INF] Request starting HTTP/2 POST https://localhost:44377/api/Auth/register - application/json 84
+2025-11-04 09:32:18.458 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AuthController.Register (EssenceShop)'
+2025-11-04 09:32:18.458 +13:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EssenceShop.Dto.AuthModel.RegisterUserDto) on controller EssenceShop.Controllers.AuthController (EssenceShop).
+2025-11-04 09:32:18.459 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-04 09:32:18.460 +13:00 [INF] Executed action EssenceShop.Controllers.AuthController.Register (EssenceShop) in 2.0225ms
+2025-11-04 09:32:18.461 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AuthController.Register (EssenceShop)'
+2025-11-04 09:32:18.461 +13:00 [INF] HTTP POST /api/Auth/register responded 400 in 3.2072 ms
+2025-11-04 09:32:18.462 +13:00 [INF] Request finished HTTP/2 POST https://localhost:44377/api/Auth/register - 400 null application/problem+json; charset=utf-8 4.4834ms
+2025-11-04 09:32:31.499 +13:00 [INF] Request starting HTTP/2 POST https://localhost:44377/api/Auth/register - application/json 86
+2025-11-04 09:32:31.499 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AuthController.Register (EssenceShop)'
+2025-11-04 09:32:31.499 +13:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EssenceShop.Dto.AuthModel.RegisterUserDto) on controller EssenceShop.Controllers.AuthController (EssenceShop).
+2025-11-04 09:32:31.504 +13:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__request_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-04 09:32:31.531 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-11-04 09:32:31.531 +13:00 [INF] Executed action EssenceShop.Controllers.AuthController.Register (EssenceShop) in 31.6176ms
+2025-11-04 09:32:31.531 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AuthController.Register (EssenceShop)'
+2025-11-04 09:32:31.531 +13:00 [INF] HTTP POST /api/Auth/register responded 400 in 32.2574 ms
+2025-11-04 09:32:31.532 +13:00 [INF] Request finished HTTP/2 POST https://localhost:44377/api/Auth/register - 400 null text/plain; charset=utf-8 33.4702ms
+2025-11-04 22:57:14.738 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 22:57:15.482 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-04 22:57:15.482 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-04 22:57:15.645 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 171.8634ms
+2025-11-04 22:57:15.832 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 22:57:15.832 +13:00 [INF] Hosting environment: Development
+2025-11-04 22:57:15.832 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-04 22:57:16.385 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 919.3854ms
+2025-11-04 22:57:16.419 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-04 22:57:16.520 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 101.3076ms
+2025-11-04 23:14:56.103 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 23:14:56.957 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-04 23:14:56.956 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-04 23:14:57.066 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 121.5865ms
+2025-11-04 23:14:57.254 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 316.2112ms
+2025-11-04 23:14:57.294 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-04 23:14:57.349 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 23:14:57.351 +13:00 [INF] Hosting environment: Development
+2025-11-04 23:14:57.351 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-04 23:14:57.825 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 531.6457ms
+2025-11-04 23:15:50.691 +13:00 [INF] Request starting HTTP/2 POST https://localhost:44377/api/Admin/register - application/json 75
+2025-11-04 23:15:51.143 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:15:51.235 +13:00 [INF] Route matched with {action = "Register", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EssenceShop.Dto.AuthModel.AdminLoginDto) on controller EssenceShop.Controllers.AdminController (EssenceShop).
+2025-11-04 23:15:53.219 +13:00 [WRN] No instantiatable types implementing `IEntityTypeConfiguration` were found while while scanning assembly 'EssenceShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+2025-11-04 23:15:53.769 +13:00 [WRN] No store type was specified for the decimal property 'AmountPaid' on entity type 'Clothes'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-04 23:15:53.771 +13:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Clothes'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-04 23:15:53.771 +13:00 [WRN] No store type was specified for the decimal property 'pricePerCloth' on entity type 'Clothes'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-04 23:15:53.772 +13:00 [WRN] No store type was specified for the decimal property 'totalPrice' on entity type 'Clothes'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-04 23:15:59.577 +13:00 [INF] Executed DbCommand (193ms) [Parameters=[@__request_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Admins] AS [a]
+        WHERE [a].[Username] = @__request_Username_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-04 23:15:59.700 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-11-04 23:15:59.714 +13:00 [INF] Executed action EssenceShop.Controllers.AdminController.Register (EssenceShop) in 8465.0554ms
+2025-11-04 23:15:59.716 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:15:59.720 +13:00 [INF] HTTP POST /api/Admin/register responded 400 in 8581.7891 ms
+2025-11-04 23:15:59.740 +13:00 [INF] Request finished HTTP/2 POST https://localhost:44377/api/Admin/register - 400 null text/plain; charset=utf-8 9049.7854ms
+2025-11-04 23:16:11.649 +13:00 [INF] Request starting HTTP/2 POST https://localhost:44377/api/Admin/register - application/json 81
+2025-11-04 23:16:11.712 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:16:11.713 +13:00 [INF] Route matched with {action = "Register", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EssenceShop.Dto.AuthModel.AdminLoginDto) on controller EssenceShop.Controllers.AdminController (EssenceShop).
+2025-11-04 23:16:11.737 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-04 23:16:11.915 +13:00 [INF] Executed action EssenceShop.Controllers.AdminController.Register (EssenceShop) in 202.0729ms
+2025-11-04 23:16:11.915 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:16:11.917 +13:00 [INF] HTTP POST /api/Admin/register responded 400 in 205.0331 ms
+2025-11-04 23:16:11.921 +13:00 [INF] Request finished HTTP/2 POST https://localhost:44377/api/Admin/register - 400 null application/problem+json; charset=utf-8 271.637ms
+2025-11-04 23:16:30.061 +13:00 [INF] Request starting HTTP/2 POST https://localhost:44377/api/Admin/register - application/json 85
+2025-11-04 23:16:30.091 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:16:30.091 +13:00 [INF] Route matched with {action = "Register", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EssenceShop.Dto.AuthModel.AdminLoginDto) on controller EssenceShop.Controllers.AdminController (EssenceShop).
+2025-11-04 23:16:30.109 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-04 23:16:30.111 +13:00 [INF] Executed action EssenceShop.Controllers.AdminController.Register (EssenceShop) in 19.6092ms
+2025-11-04 23:16:30.111 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:16:30.111 +13:00 [INF] HTTP POST /api/Admin/register responded 400 in 20.4507 ms
+2025-11-04 23:16:30.112 +13:00 [INF] Request finished HTTP/2 POST https://localhost:44377/api/Admin/register - 400 null application/problem+json; charset=utf-8 51.2207ms
+2025-11-04 23:16:43.694 +13:00 [INF] Request starting HTTP/2 POST https://localhost:44377/api/Admin/register - application/json 88
+2025-11-04 23:16:43.697 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:16:43.697 +13:00 [INF] Route matched with {action = "Register", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EssenceShop.Dto.AuthModel.AdminLoginDto) on controller EssenceShop.Controllers.AdminController (EssenceShop).
+2025-11-04 23:16:43.700 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-04 23:16:43.702 +13:00 [INF] Executed action EssenceShop.Controllers.AdminController.Register (EssenceShop) in 4.3634ms
+2025-11-04 23:16:43.702 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:16:43.703 +13:00 [INF] HTTP POST /api/Admin/register responded 400 in 6.4573 ms
+2025-11-04 23:16:43.705 +13:00 [INF] Request finished HTTP/2 POST https://localhost:44377/api/Admin/register - 400 null application/problem+json; charset=utf-8 11.5715ms
+2025-11-04 23:17:05.966 +13:00 [INF] Request starting HTTP/2 POST https://localhost:44377/api/Admin/register - application/json 85
+2025-11-04 23:17:05.967 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:17:05.967 +13:00 [INF] Route matched with {action = "Register", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EssenceShop.Dto.AuthModel.AdminLoginDto) on controller EssenceShop.Controllers.AdminController (EssenceShop).
+2025-11-04 23:17:05.973 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-04 23:17:05.974 +13:00 [INF] Executed action EssenceShop.Controllers.AdminController.Register (EssenceShop) in 6.8185ms
+2025-11-04 23:17:05.975 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:17:05.976 +13:00 [INF] HTTP POST /api/Admin/register responded 400 in 9.3571 ms
+2025-11-04 23:17:05.977 +13:00 [INF] Request finished HTTP/2 POST https://localhost:44377/api/Admin/register - 400 null application/problem+json; charset=utf-8 11.5899ms
+2025-11-04 23:18:41.001 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 23:18:41.900 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-04 23:18:41.902 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-04 23:18:42.057 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 164.7976ms
+2025-11-04 23:18:42.190 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 305.1463ms
+2025-11-04 23:18:42.277 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-04 23:18:42.349 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 23:18:42.349 +13:00 [INF] Hosting environment: Development
+2025-11-04 23:18:42.349 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-04 23:18:42.796 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 519.9542ms
+2025-11-04 23:19:23.802 +13:00 [INF] Request starting HTTP/2 POST https://localhost:44377/api/Admin/register - application/json 96
+2025-11-04 23:19:24.081 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:19:24.169 +13:00 [INF] Route matched with {action = "Register", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EssenceShop.Dto.AuthModel.AdminLoginDto) on controller EssenceShop.Controllers.AdminController (EssenceShop).
+2025-11-04 23:19:24.894 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-04 23:19:25.045 +13:00 [INF] Executed action EssenceShop.Controllers.AdminController.Register (EssenceShop) in 868.0147ms
+2025-11-04 23:19:25.046 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:19:25.050 +13:00 [INF] HTTP POST /api/Admin/register responded 400 in 969.4368 ms
+2025-11-04 23:19:25.056 +13:00 [INF] Request finished HTTP/2 POST https://localhost:44377/api/Admin/register - 400 null application/problem+json; charset=utf-8 1255.7096ms
+2025-11-04 23:19:51.762 +13:00 [INF] Request starting HTTP/2 POST https://localhost:44377/api/Admin/register - application/json 93
+2025-11-04 23:19:51.820 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:19:51.821 +13:00 [INF] Route matched with {action = "Register", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EssenceShop.Dto.AuthModel.AdminLoginDto) on controller EssenceShop.Controllers.AdminController (EssenceShop).
+2025-11-04 23:19:51.941 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-04 23:19:51.947 +13:00 [INF] Executed action EssenceShop.Controllers.AdminController.Register (EssenceShop) in 124.4908ms
+2025-11-04 23:19:51.948 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:19:51.950 +13:00 [INF] HTTP POST /api/Admin/register responded 400 in 130.0429 ms
+2025-11-04 23:19:51.952 +13:00 [INF] Request finished HTTP/2 POST https://localhost:44377/api/Admin/register - 400 null application/problem+json; charset=utf-8 190.0296ms
+2025-11-04 23:21:57.628 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 23:21:58.590 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-04 23:21:58.589 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-04 23:21:58.801 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 221.2323ms
+2025-11-04 23:21:59.044 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 473.864ms
+2025-11-04 23:21:59.152 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 23:21:59.153 +13:00 [INF] Hosting environment: Development
+2025-11-04 23:21:59.154 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-04 23:21:59.187 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-04 23:21:59.633 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 443.0278ms
+2025-11-04 23:22:48.846 +13:00 [INF] Request starting HTTP/2 POST https://localhost:44377/api/Admin/register - application/json 94
+2025-11-04 23:22:49.208 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:22:49.294 +13:00 [INF] Route matched with {action = "Register", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EssenceShop.Dto.AuthModel.AdminLoginDto) on controller EssenceShop.Controllers.AdminController (EssenceShop).
+2025-11-04 23:22:49.909 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-04 23:22:50.048 +13:00 [INF] Executed action EssenceShop.Controllers.AdminController.Register (EssenceShop) in 744.4549ms
+2025-11-04 23:22:50.048 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:22:50.054 +13:00 [INF] HTTP POST /api/Admin/register responded 400 in 848.6023 ms
+2025-11-04 23:22:50.063 +13:00 [INF] Request finished HTTP/2 POST https://localhost:44377/api/Admin/register - 400 null application/problem+json; charset=utf-8 1217.3659ms
+2025-11-04 23:23:01.102 +13:00 [INF] Request starting HTTP/2 POST https://localhost:44377/api/Admin/register - application/json 94
+2025-11-04 23:23:01.108 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:23:01.110 +13:00 [INF] Route matched with {action = "Register", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EssenceShop.Dto.AuthModel.AdminLoginDto) on controller EssenceShop.Controllers.AdminController (EssenceShop).
+2025-11-04 23:23:01.144 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-04 23:23:01.148 +13:00 [INF] Executed action EssenceShop.Controllers.AdminController.Register (EssenceShop) in 37.73ms
+2025-11-04 23:23:01.149 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:23:01.149 +13:00 [INF] HTTP POST /api/Admin/register responded 400 in 41.1255 ms
+2025-11-04 23:23:01.150 +13:00 [INF] Request finished HTTP/2 POST https://localhost:44377/api/Admin/register - 400 null application/problem+json; charset=utf-8 48.9514ms
+2025-11-04 23:25:41.701 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 23:25:42.768 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-04 23:25:42.767 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-04 23:25:42.911 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 159.8215ms
+2025-11-04 23:25:43.059 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 312.6056ms
+2025-11-04 23:25:43.114 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 23:25:43.114 +13:00 [INF] Hosting environment: Development
+2025-11-04 23:25:43.115 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-04 23:25:43.169 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-04 23:25:43.555 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 386.2771ms
+2025-11-04 23:26:44.920 +13:00 [INF] Request starting HTTP/2 POST https://localhost:44377/api/Admin/register - application/json 91
+2025-11-04 23:26:45.206 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:26:45.285 +13:00 [INF] Route matched with {action = "Register", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EssenceShop.Dto.AuthModel.AdminLoginDto) on controller EssenceShop.Controllers.AdminController (EssenceShop).
+2025-11-04 23:26:45.960 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-04 23:26:46.092 +13:00 [INF] Executed action EssenceShop.Controllers.AdminController.Register (EssenceShop) in 791.9771ms
+2025-11-04 23:26:46.092 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:26:46.098 +13:00 [INF] HTTP POST /api/Admin/register responded 400 in 894.0157 ms
+2025-11-04 23:26:46.106 +13:00 [INF] Request finished HTTP/2 POST https://localhost:44377/api/Admin/register - 400 null application/problem+json; charset=utf-8 1186.9081ms
+2025-11-04 23:28:37.214 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 23:28:37.695 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-04 23:28:37.695 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-04 23:28:37.809 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 116.594ms
+2025-11-04 23:28:37.898 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 215.1343ms
+2025-11-04 23:28:37.963 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 23:28:37.963 +13:00 [INF] Hosting environment: Development
+2025-11-04 23:28:37.963 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-04 23:28:37.982 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-04 23:28:38.296 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 314.871ms
+2025-11-04 23:29:28.680 +13:00 [INF] Request starting HTTP/2 POST https://localhost:44377/api/Admin/register - application/json 92
+2025-11-04 23:29:29.060 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:29:29.156 +13:00 [INF] Route matched with {action = "Register", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EssenceShop.Dto.AuthModel.AdminLoginDto) on controller EssenceShop.Controllers.AdminController (EssenceShop).
+2025-11-04 23:29:29.814 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-04 23:29:29.935 +13:00 [INF] Executed action EssenceShop.Controllers.AdminController.Register (EssenceShop) in 765.0236ms
+2025-11-04 23:29:29.935 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:29:29.943 +13:00 [INF] HTTP POST /api/Admin/register responded 400 in 887.2213 ms
+2025-11-04 23:29:29.971 +13:00 [INF] Request finished HTTP/2 POST https://localhost:44377/api/Admin/register - 400 null application/problem+json; charset=utf-8 1291.4568ms
+2025-11-04 23:39:44.606 +13:00 [INF] Request starting HTTP/2 POST https://localhost:44377/api/Admin/register - application/json 98
+2025-11-04 23:39:44.682 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:39:44.698 +13:00 [INF] Route matched with {action = "Register", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EssenceShop.Dto.AuthModel.AdminLoginDto) on controller EssenceShop.Controllers.AdminController (EssenceShop).
+2025-11-04 23:39:44.827 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-04 23:39:44.829 +13:00 [INF] Executed action EssenceShop.Controllers.AdminController.Register (EssenceShop) in 113.0732ms
+2025-11-04 23:39:44.829 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:39:44.829 +13:00 [INF] HTTP POST /api/Admin/register responded 400 in 147.8027 ms
+2025-11-04 23:39:44.830 +13:00 [INF] Request finished HTTP/2 POST https://localhost:44377/api/Admin/register - 400 null application/problem+json; charset=utf-8 224.7092ms
+2025-11-04 23:41:04.571 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 23:41:05.421 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-04 23:41:05.422 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-04 23:41:05.558 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 140.9452ms
+2025-11-04 23:41:05.679 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 274.8508ms
+2025-11-04 23:41:05.792 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-04 23:41:05.822 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 23:41:05.823 +13:00 [INF] Hosting environment: Development
+2025-11-04 23:41:05.823 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-04 23:41:06.275 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 483.1242ms
+2025-11-04 23:41:38.746 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 23:41:39.534 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-04 23:41:39.535 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-04 23:41:39.607 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 82.6091ms
+2025-11-04 23:41:39.685 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 162.3269ms
+2025-11-04 23:41:39.804 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-04 23:41:40.018 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 214.085ms
+2025-11-04 23:41:40.018 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 23:41:40.019 +13:00 [INF] Hosting environment: Development
+2025-11-04 23:41:40.019 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-04 23:42:55.680 +13:00 [INF] Request starting HTTP/2 POST https://localhost:44377/api/Admin/register - application/json 77
+2025-11-04 23:42:56.076 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:42:56.153 +13:00 [INF] Route matched with {action = "Register", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EssenceShop.Dto.AuthModel.AdminLoginDto) on controller EssenceShop.Controllers.AdminController (EssenceShop).
+2025-11-04 23:42:56.757 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-04 23:42:56.872 +13:00 [INF] Executed action EssenceShop.Controllers.AdminController.Register (EssenceShop) in 709.2753ms
+2025-11-04 23:42:56.872 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:42:56.878 +13:00 [INF] HTTP POST /api/Admin/register responded 400 in 801.0974 ms
+2025-11-04 23:42:56.887 +13:00 [INF] Request finished HTTP/2 POST https://localhost:44377/api/Admin/register - 400 null application/problem+json; charset=utf-8 1207.2223ms
+2025-11-04 23:43:19.034 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 23:43:19.463 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-04 23:43:19.461 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-04 23:43:19.517 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 51.2615ms
+2025-11-04 23:43:19.671 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 209.2262ms
+2025-11-04 23:43:19.715 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 23:43:19.716 +13:00 [INF] Hosting environment: Development
+2025-11-04 23:43:19.717 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-04 23:43:19.728 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-04 23:43:19.889 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 161.5404ms
+2025-11-04 23:44:17.641 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 23:44:17.981 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_vs/browserLink - null null
+2025-11-04 23:44:17.982 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-04 23:44:18.032 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 51.66ms
+2025-11-04 23:44:18.067 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/_vs/browserLink - 200 null text/javascript; charset=UTF-8 89.8392ms
+2025-11-04 23:44:18.126 +13:00 [INF] Request starting HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - null null
+2025-11-04 23:44:18.143 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 23:44:18.144 +13:00 [INF] Hosting environment: Development
+2025-11-04 23:44:18.144 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-04 23:44:18.511 +13:00 [INF] Request finished HTTP/2 GET https://localhost:44377/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 384.854ms
+2025-11-04 23:45:17.877 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 23:45:18.183 +13:00 [INF] Now listening on: https://localhost:7024
+2025-11-04 23:45:18.188 +13:00 [INF] Now listening on: http://localhost:5000
+2025-11-04 23:45:18.504 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 23:45:18.624 +13:00 [INF] Hosting environment: Development
+2025-11-04 23:45:18.625 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-04 23:45:18.666 +13:00 [INF] Request starting HTTP/2 GET https://localhost:7024/swagger - null null
+2025-11-04 23:45:18.820 +13:00 [INF] Request finished HTTP/2 GET https://localhost:7024/swagger - 301 0 null 156.9063ms
+2025-11-04 23:45:18.825 +13:00 [INF] Request starting HTTP/2 GET https://localhost:7024/swagger/index.html - null null
+2025-11-04 23:45:18.934 +13:00 [INF] Request finished HTTP/2 GET https://localhost:7024/swagger/index.html - 200 null text/html;charset=utf-8 109.4723ms
+2025-11-04 23:45:18.958 +13:00 [INF] Request starting HTTP/2 GET https://localhost:7024/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-04 23:45:18.958 +13:00 [INF] Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - null null
+2025-11-04 23:45:18.958 +13:00 [INF] Request starting HTTP/2 GET https://localhost:7024/swagger/index.css - null null
+2025-11-04 23:45:18.959 +13:00 [INF] Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui-standalone-preset.js - null null
+2025-11-04 23:45:18.970 +13:00 [INF] Request starting HTTP/2 GET https://localhost:7024/swagger/index.js - null null
+2025-11-04 23:45:18.978 +13:00 [INF] Request finished HTTP/2 GET https://localhost:7024/swagger/index.js - 200 null application/javascript;charset=utf-8 7.712ms
+2025-11-04 23:45:18.982 +13:00 [INF] Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui-bundle.js - null null
+2025-11-04 23:45:18.985 +13:00 [INF] Request finished HTTP/2 GET https://localhost:7024/swagger/index.css - 304 null null 27.1858ms
+2025-11-04 23:45:18.985 +13:00 [INF] Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui-standalone-preset.js - 304 null null 26.5126ms
+2025-11-04 23:45:18.985 +13:00 [INF] Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - 304 null null 27.2297ms
+2025-11-04 23:45:18.995 +13:00 [INF] Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui-bundle.js - 304 null null 12.6299ms
+2025-11-04 23:45:18.995 +13:00 [INF] Request finished HTTP/2 GET https://localhost:7024/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 37.8719ms
+2025-11-04 23:45:19.014 +13:00 [INF] Request starting HTTP/2 GET https://localhost:7024/_vs/browserLink - null null
+2025-11-04 23:45:19.072 +13:00 [INF] Request finished HTTP/2 GET https://localhost:7024/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.6521ms
+2025-11-04 23:45:19.335 +13:00 [INF] Request starting HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - null null
+2025-11-04 23:45:19.386 +13:00 [INF] Request finished HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 50.812ms
+2025-11-04 23:45:19.387 +13:00 [INF] Request starting HTTP/2 GET https://localhost:7024/swagger/favicon-32x32.png - null null
+2025-11-04 23:45:19.401 +13:00 [INF] Request finished HTTP/2 GET https://localhost:7024/swagger/favicon-32x32.png - 304 null null 14.4415ms
+2025-11-04 23:46:39.369 +13:00 [INF] Request starting HTTP/2 POST https://localhost:7024/api/Admin/login - application/json 83
+2025-11-04 23:46:39.488 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AdminController.Login (EssenceShop)'
+2025-11-04 23:46:39.541 +13:00 [INF] Route matched with {action = "Login", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EssenceShop.Dto.AuthModel.AdminLoginDto) on controller EssenceShop.Controllers.AdminController (EssenceShop).
+2025-11-04 23:46:39.864 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-04 23:46:39.913 +13:00 [INF] Executed action EssenceShop.Controllers.AdminController.Login (EssenceShop) in 361.0705ms
+2025-11-04 23:46:39.917 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AdminController.Login (EssenceShop)'
+2025-11-04 23:46:39.923 +13:00 [INF] HTTP POST /api/Admin/login responded 400 in 436.2566 ms
+2025-11-04 23:46:39.933 +13:00 [INF] Request finished HTTP/2 POST https://localhost:7024/api/Admin/login - 400 null application/problem+json; charset=utf-8 564.4323ms
+2025-11-04 23:47:22.154 +13:00 [INF] Request starting HTTP/2 POST https://localhost:7024/api/Admin/login - application/json 83
+2025-11-04 23:47:22.189 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AdminController.Login (EssenceShop)'
+2025-11-04 23:47:22.191 +13:00 [INF] Route matched with {action = "Login", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EssenceShop.Dto.AuthModel.AdminLoginDto) on controller EssenceShop.Controllers.AdminController (EssenceShop).
+2025-11-04 23:47:22.211 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-04 23:47:22.216 +13:00 [INF] Executed action EssenceShop.Controllers.AdminController.Login (EssenceShop) in 20.5336ms
+2025-11-04 23:47:22.221 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AdminController.Login (EssenceShop)'
+2025-11-04 23:47:22.225 +13:00 [INF] HTTP POST /api/Admin/login responded 400 in 36.5552 ms
+2025-11-04 23:47:22.231 +13:00 [INF] Request finished HTTP/2 POST https://localhost:7024/api/Admin/login - 400 null application/problem+json; charset=utf-8 76.7845ms
+2025-11-04 23:47:32.881 +13:00 [INF] Request starting HTTP/2 POST https://localhost:7024/api/Admin/login - application/json 83
+2025-11-04 23:47:32.895 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AdminController.Login (EssenceShop)'
+2025-11-04 23:47:32.899 +13:00 [INF] Route matched with {action = "Login", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EssenceShop.Dto.AuthModel.AdminLoginDto) on controller EssenceShop.Controllers.AdminController (EssenceShop).
+2025-11-04 23:47:32.914 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-04 23:47:32.918 +13:00 [INF] Executed action EssenceShop.Controllers.AdminController.Login (EssenceShop) in 14.5886ms
+2025-11-04 23:47:32.922 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AdminController.Login (EssenceShop)'
+2025-11-04 23:47:32.925 +13:00 [INF] HTTP POST /api/Admin/login responded 400 in 29.9439 ms
+2025-11-04 23:47:32.929 +13:00 [INF] Request finished HTTP/2 POST https://localhost:7024/api/Admin/login - 400 null application/problem+json; charset=utf-8 47.9448ms
+2025-11-04 23:52:14.840 +13:00 [INF] User profile is available. Using 'C:\Users\admas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 23:52:15.130 +13:00 [INF] Now listening on: https://localhost:7024
+2025-11-04 23:52:15.133 +13:00 [INF] Now listening on: http://localhost:5000
+2025-11-04 23:52:15.268 +13:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 23:52:15.270 +13:00 [INF] Hosting environment: Development
+2025-11-04 23:52:15.271 +13:00 [INF] Content root path: C:\Users\admas\source\repos\EssenceShop\EssenceShop
+2025-11-04 23:52:15.726 +13:00 [INF] Request starting HTTP/2 GET https://localhost:7024/swagger/index.html - null null
+2025-11-04 23:52:16.035 +13:00 [INF] Request finished HTTP/2 GET https://localhost:7024/swagger/index.html - 200 null text/html;charset=utf-8 312.3508ms
+2025-11-04 23:52:16.038 +13:00 [INF] Request starting HTTP/2 GET https://localhost:7024/_vs/browserLink - null null
+2025-11-04 23:52:16.038 +13:00 [INF] Request starting HTTP/2 GET https://localhost:7024/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-04 23:52:16.090 +13:00 [INF] Request finished HTTP/2 GET https://localhost:7024/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 51.6226ms
+2025-11-04 23:52:16.133 +13:00 [INF] Request finished HTTP/2 GET https://localhost:7024/_vs/browserLink - 200 null text/javascript; charset=UTF-8 95.5748ms
+2025-11-04 23:52:17.243 +13:00 [INF] Request starting HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - null null
+2025-11-04 23:52:17.323 +13:00 [INF] Request finished HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 80.0941ms
+2025-11-04 23:53:18.413 +13:00 [INF] Request starting HTTP/2 POST https://localhost:7024/api/Admin/register - application/json 82
+2025-11-04 23:53:18.517 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:53:18.554 +13:00 [INF] Route matched with {action = "Register", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EssenceShop.Dto.AuthModel.AdminLoginDto) on controller EssenceShop.Controllers.AdminController (EssenceShop).
+2025-11-04 23:53:19.461 +13:00 [WRN] No instantiatable types implementing `IEntityTypeConfiguration` were found while while scanning assembly 'EssenceShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+2025-11-04 23:53:19.842 +13:00 [WRN] No store type was specified for the decimal property 'AmountPaid' on entity type 'Clothes'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-04 23:53:19.848 +13:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Clothes'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-04 23:53:19.852 +13:00 [WRN] No store type was specified for the decimal property 'pricePerCloth' on entity type 'Clothes'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-04 23:53:19.858 +13:00 [WRN] No store type was specified for the decimal property 'totalPrice' on entity type 'Clothes'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-04 23:53:22.929 +13:00 [INF] Executed DbCommand (59ms) [Parameters=[@__request_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Admins] AS [a]
+        WHERE [a].[Username] = @__request_Username_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-04 23:53:22.977 +13:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-11-04 23:53:22.983 +13:00 [INF] Executed action EssenceShop.Controllers.AdminController.Register (EssenceShop) in 4420.3416ms
+2025-11-04 23:53:22.986 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:53:22.991 +13:00 [INF] HTTP POST /api/Admin/register responded 400 in 4476.5252 ms
+2025-11-04 23:53:23.007 +13:00 [INF] Request finished HTTP/2 POST https://localhost:7024/api/Admin/register - 400 null text/plain; charset=utf-8 4594.8237ms
+2025-11-04 23:53:39.599 +13:00 [INF] Request starting HTTP/2 POST https://localhost:7024/api/Admin/register - application/json 83
+2025-11-04 23:53:39.640 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:53:39.647 +13:00 [INF] Route matched with {action = "Register", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EssenceShop.Dto.AuthModel.AdminLoginDto) on controller EssenceShop.Controllers.AdminController (EssenceShop).
+2025-11-04 23:53:39.776 +13:00 [INF] Executed DbCommand (7ms) [Parameters=[@__request_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Admins] AS [a]
+        WHERE [a].[Username] = @__request_Username_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-04 23:53:40.182 +13:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Admins] ([Id], [Email], [PasswordHash], [Role], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-11-04 23:53:40.207 +13:00 [INF] New admin 'Samuel' registered successfully at "2025-11-04T10:53:40.2070036Z"
+2025-11-04 23:53:40.212 +13:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-11-04 23:53:40.215 +13:00 [INF] Executed action EssenceShop.Controllers.AdminController.Register (EssenceShop) in 551.2948ms
+2025-11-04 23:53:40.218 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AdminController.Register (EssenceShop)'
+2025-11-04 23:53:40.219 +13:00 [INF] HTTP POST /api/Admin/register responded 200 in 580.0324 ms
+2025-11-04 23:53:40.224 +13:00 [INF] Request finished HTTP/2 POST https://localhost:7024/api/Admin/register - 200 null text/plain; charset=utf-8 625.0339ms
+2025-11-04 23:54:09.771 +13:00 [INF] Request starting HTTP/2 POST https://localhost:7024/api/Admin/login - application/json 83
+2025-11-04 23:54:09.802 +13:00 [INF] Executing endpoint 'EssenceShop.Controllers.AdminController.Login (EssenceShop)'
+2025-11-04 23:54:09.837 +13:00 [INF] Route matched with {action = "Login", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EssenceShop.Dto.AuthModel.AdminLoginDto) on controller EssenceShop.Controllers.AdminController (EssenceShop).
+2025-11-04 23:54:10.241 +13:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Email], [a].[PasswordHash], [a].[Role], [a].[Username]
+FROM [Admins] AS [a]
+WHERE [a].[Username] = @__request_Username_0
+2025-11-04 23:54:10.338 +13:00 [INF] Admin 'Samuel' logged in successfully at "2025-11-04T10:54:10.3380955Z"
+2025-11-04 23:54:10.342 +13:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-04 23:54:10.356 +13:00 [INF] Executed action EssenceShop.Controllers.AdminController.Login (EssenceShop) in 499.465ms
+2025-11-04 23:54:10.361 +13:00 [INF] Executed endpoint 'EssenceShop.Controllers.AdminController.Login (EssenceShop)'
+2025-11-04 23:54:10.367 +13:00 [INF] HTTP POST /api/Admin/login responded 200 in 565.0870 ms
+2025-11-04 23:54:10.373 +13:00 [INF] Request finished HTTP/2 POST https://localhost:7024/api/Admin/login - 200 null application/json; charset=utf-8 601.5297ms

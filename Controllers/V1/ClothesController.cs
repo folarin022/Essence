@@ -4,11 +4,13 @@ using EssenceShop.Service.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EssenceShop.Controllers
+namespace EssenceShop.Controllers.V1
 {
-    [Authorize]
-    [Route("api/[controller]")]
+        [Authorize]
     [ApiController]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
+    
     public class ClothesController : ControllerBase
     {
         private readonly IClothesServices _clothesService;
