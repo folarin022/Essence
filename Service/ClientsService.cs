@@ -12,12 +12,12 @@ namespace EssenceShop.Service
 {
     public class ClientsService : IClientsService
     {
-        private readonly IClientsRepositries _clientsRepositries;
+        private readonly IAdminRepositries _clientsRepositries;
         private readonly ILogger<ClientsService> _logger;
         private readonly EssenceDbContext _dbContext;
 
         public ClientsService(
-            IClientsRepositries clientsRepositries,
+            IAdminRepositries clientsRepositries,
             ILogger<ClientsService> logger,
             EssenceDbContext dbContext)
         {

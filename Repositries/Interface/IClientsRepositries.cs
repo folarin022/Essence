@@ -3,7 +3,7 @@ using EssenceShop.Dto.ClientsModel;
 
 namespace EssenceShop.Repositries.Interface
 {
-    public interface IClientsRepositries
+    public interface IAdminRepositries
     {
         Task<bool> AddClient(Clients clients,CancellationToken cancellationToken);
         Task<Clients?> GetClientsById(Guid Id,CancellationToken cancellationToken);

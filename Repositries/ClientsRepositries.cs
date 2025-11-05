@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EssenceShop.Repositries
 {
-    public class ClientsRepositries(EssenceDbContext dbContext) : IClientsRepositries
+    public class ClientsRepositries(EssenceDbContext dbContext) : IAdminRepositries
     {
         public Task AddAsync(CreateClientDto request)
         {

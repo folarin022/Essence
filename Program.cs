@@ -29,7 +29,7 @@ builder.Services.AddDbContext<EssenceDbContext>(options =>
 builder.Services.AddScoped<IClothesServices, ClothesService>();
 builder.Services.AddScoped<IClothesRepositries, ClothesRepositries>();
 builder.Services.AddScoped<IClientsService, ClientsService>();
-builder.Services.AddScoped<IClientsRepositries, ClientsRepositries>();
+builder.Services.AddScoped<IAdminRepositries, ClientsRepositries>();
 builder.Services.AddScoped<JwtService>();
 
 var key = Encoding.UTF8.GetBytes("THIS_IS_YOUR_SECRET_KEY_32_CHARS_MINIMUM");
